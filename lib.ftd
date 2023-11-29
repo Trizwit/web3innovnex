@@ -1,0 +1,373 @@
+-- component navbar:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-link-1: 
+string cta-link-2:
+string cta-link-3:
+string cta-link-4:
+string cta-link-5:
+
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
+height: hug-content
+
+-- desk-navbar:
+logo: $navbar.logo
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+cta-text-4: $navbar.cta-text-4
+cta-text-5: $navbar.cta-text-5
+cta-link-1: $navbar.cta-link-1
+cta-link-2: $navbar.cta-link-2
+cta-link-3: $navbar.cta-link-3 
+cta-link-4: $navbar.cta-link-4
+cta-link-5: $navbar.cta-link-5
+
+-- end: ftd.column
+
+
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+
+-- mob-navbar:
+logo: $navbar.logo
+
+
+-- drop-navbar:
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+cta-text-4: $navbar.cta-text-4
+cta-text-5: $navbar.cta-text-5
+cta-link-1: $navbar.cta-link-1
+cta-link-2: $navbar.cta-link-2
+cta-link-3: $navbar.cta-link-3 
+cta-link-4: $navbar.cta-link-4
+cta-link-5: $navbar.cta-link-5
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+
+
+-- component desk-navbar:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-link-1:
+string cta-link-2:
+string cta-link-3:
+string cta-link-4:
+string cta-link-5:
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.vw: 28
+border-color: grey
+border-bottom-width.px: 2
+background.solid: black
+padding.px: 32
+
+-- ftd.row:
+height: fill-container
+
+-- ftd.image: 
+src: $desk-navbar.logo
+width.fixed.vw: 12
+height.fixed.vw: 7
+
+-- end: ftd.row
+
+-- ftd.row: 
+width: fill-container
+height: fill-container
+spacing: space-between
+padding-top.px: 36
+
+-- ftd.text: $desk-navbar.cta-text-1
+role: $inherited.types.heading-small
+color: grey
+link: $desk-navbar.cta-link-1
+
+-- ftd.text: $desk-navbar.cta-text-2
+role: $inherited.types.heading-small
+color: grey
+link: $desk-navbar.cta-link-2
+
+-- ftd.text: $desk-navbar.cta-text-3
+role: $inherited.types.heading-small
+color: grey
+link: $desk-navbar.cta-link-3
+
+-- ftd.text: $desk-navbar.cta-text-4
+role: $inherited.types.heading-small
+color: grey
+link: $desk-navbar.cta-link-4
+
+-- ftd.text: $desk-navbar.cta-text-5
+role: $inherited.types.heading-small
+color: grey
+link: $desk-navbar.cta-link-5
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: desk-navbar
+
+
+
+
+
+
+
+
+
+-- boolean $menu-open: false
+
+-- component mob-navbar:
+ftd.image-src logo:
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+spacing: space-between
+background.solid: black
+border-color: grey
+border-bottom-width.px: 2
+padding.px: 10
+
+-- ftd.image:
+src: $mob-navbar.logo
+width.fixed.vw: 28
+height.fixed.vw: 20
+
+-- ftd.image: 
+src: $assets.files.assets.burger-menu.svg
+height.fixed.px: 30
+margin-top.px: 16
+$on-click$: $ftd.set-bool($a = $menu-open, v = true) 
+
+
+-- end: ftd.row
+
+-- end: mob-navbar
+
+
+
+
+
+
+
+
+
+
+-- component drop-navbar:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-link-1:
+string cta-link-2:
+string cta-link-3:
+string cta-link-4:
+string cta-link-5:
+
+-- ftd.row:
+if: {menu-open}
+width: fill-container
+spacing.fixed.vw: 28
+background.solid: black
+padding.px: 32
+
+
+-- ftd.column: 
+width: fill-container
+height: fill-container
+spacing.fixed.vw: 4
+padding-top.px: 36
+
+-- ftd.text: $drop-navbar.cta-text-1
+role: $inherited.types.heading-tiny
+color: grey
+link: $drop-navbar.cta-link-1
+
+-- ftd.text: $drop-navbar.cta-text-2
+role: $inherited.types.heading-tiny
+color: grey
+link: $drop-navbar.cta-link-2
+
+-- ftd.text: $drop-navbar.cta-text-3
+role: $inherited.types.heading-tiny
+color: grey
+link: $drop-navbar.cta-link-3
+
+-- ftd.text: $drop-navbar.cta-text-4
+role: $inherited.types.heading-tiny
+color: grey
+link: $drop-navbar.cta-link-4
+
+-- ftd.text: $drop-navbar.cta-text-5
+role: $inherited.types.heading-tiny
+color: grey
+link: $drop-navbar.cta-link-5
+
+-- end: ftd.column
+
+-- ftd.image: 
+src: $assets.files.assets.cross.png
+height.fixed.px: 30
+margin-top.px: 30
+margin-right.px: 100
+z-index: 100
+$on-click$: $ftd.set-bool($a = $menu-open, v = false)
+
+-- end: ftd.row
+
+-- end: drop-navbar
+
+
+
+
+
+
+
+
+
+
+-- component web3-page:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-link-1:
+string cta-link-2:
+string cta-link-3:
+string cta-link-4:
+string cta-link-5:
+string title:
+string sub-title: 
+string cta-button:
+string button-link-1:
+boolean $is-active-1: false
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+
+-- ftd.row: 
+width: fill-container
+
+-- navbar:
+logo: $web3-page.logo
+cta-text-1: $web3-page.cta-text-1
+cta-text-2: $web3-page.cta-text-2
+cta-text-3: $web3-page.cta-text-3
+cta-text-4: $web3-page.cta-text-4
+cta-text-5: $web3-page.cta-text-5
+cta-link-1: $web3-page.cta-link-1
+cta-link-2: $web3-page.cta-link-2
+cta-link-3: $web3-page.cta-link-3
+cta-link-4: $web3-page.cta-link-4
+cta-link-5: $web3-page.cta-link-5
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
+spacing.fixed.vw: 2
+background.solid: black
+padding.vw: 4
+
+-- ftd.text: $web3-page.title
+role: $inherited.types.heading-hero
+color: grey
+padding-right.vw: 20
+padding-top.vw: 2
+
+-- ftd.text: $web3-page.sub-title
+role: $inherited.types.heading-small
+color: grey
+
+-- ftd.text: $web3-page.cta-button
+role: $inherited.types.button-medium
+text-align: center
+width.fixed.vw: 12
+padding-vertical.px: 12
+margin-top.px: 20
+border-radius.px: 4
+background.solid: orange
+background.solid if {web3-page.is-active-1}: pink
+$on-mouse-enter$: $ftd.set-bool($a = $web3-page.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $web3-page.is-active-1, v = false)
+color: black
+link: $web3-page.button-link-1
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+spacing.fixed.vw: 4
+background.solid: black
+padding.vw: 4
+
+-- ftd.text: $web3-page.title
+role: $inherited.types.heading-large
+color: grey
+padding-right.vw: 10
+padding-top.vw: 2
+
+-- ftd.text: $web3-page.sub-title
+role: $inherited.types.heading-small
+color: grey
+
+-- ftd.text: $web3-page.cta-button
+role: $inherited.types.button-medium
+text-align: center
+width.fixed.vw: 28
+padding-vertical.px: 8
+border-radius.px: 4
+background.solid: orange
+background.solid if {web3-page.is-active-1}: pink
+$on-mouse-enter$: $ftd.set-bool($a = $web3-page.is-active-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $web3-page.is-active-1, v = false)
+color: black
+link: $web3-page.button-link-1
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: web3-page

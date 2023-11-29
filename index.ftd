@@ -14,3 +14,53 @@ title: **Welcome To Web3 Innovators Nexus Journey**
 sub-title: Build and Grow together
 cta-button: **Join Us**
 button-link-1: https://trizui.trizwit.com/
+about-cover: $assets.files.assets.about.jpg
+about-heading: About Us
+
+We empower Web3 founders to spread their wings and grow.
+We wholeheartedly embrace the vital role of community support in propelling our founders to new heights.
+
+
+-- lib.events:
+title: Events
+
+-- lib.event:
+date: DEC 8, 2023
+place: BANGALORE
+location: Draper Startup House For Entrepreneurs Bengaluru
+time: 5:00PM – 9:00PM 
+
+-- lib.event:
+date: JAN 11, 2024
+place: HYDERABAD
+location: Draper Startup House For Entrepreneurs Bengaluru
+time: 5:00PM – 9:00PM  
+
+-- lib.event:
+date: FEB, 2024
+place: MUMBAI
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: MAR, 2024
+place: AHMEDABAD
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: APR, 2024
+place: DUBAI
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: MAY, 2024
+place: JAIPUR
+location: Upcoming Event
+time: To Be Announced 
+
+-- end: lib.events
+
+-- end: lib.web3-page
+

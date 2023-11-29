@@ -263,6 +263,201 @@ $on-click$: $ftd.set-bool($a = $menu-open, v = false)
 
 
 
+-- component hero-1:
+ftd.image-src cover:
+caption headline:
+body content:
+
+
+-- ftd.column:
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
+width: fill-container
+height: hug-content
+align-content: center
+padding-vertical.px if { ftd.device == "desktop" }: 80
+background.solid: #000
+
+
+-- ftd.column:
+width.fixed.percent: 45
+height: auto
+align-content: center
+
+-- ftd.image:
+src: $hero-1.cover   
+width.fixed.percent: 100
+height: auto 
+
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.percent: 40
+align-content: left
+align-self: center
+margin-left.px: 60
+
+-- ftd.text: $hero-1.headline
+margin-bottom.px: 16
+role: $inherited.types.heading-medium
+color: grey
+
+
+-- ftd.text: $hero-1.content
+margin-bottom.px: 32
+role: $inherited.types.heading-tiny
+color: #fff
+
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+height: hug-content
+align-content: center
+padding-horizontal.px: 15
+padding-vertical.px: 20
+background.solid: #000
+
+-- ftd.image:
+src: $hero-1.cover   
+width.fixed.percent: 100
+height: auto 
+
+-- ftd.column:
+width: fill-container
+align-content: left
+align-self: center
+margin-left.px: 10
+margin-top.px: 20
+
+-- ftd.text: $hero-1.headline
+margin-bottom.px: 16
+role: $inherited.types.heading-small
+color: grey
+
+
+-- ftd.text: $hero-1.content
+margin-bottom.px: 32
+role: $inherited.types.heading-tiny
+color: #fff
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: hero-1
+
+
+
+
+
+
+
+
+
+
+-- component event:
+string date:
+string place:
+string location:
+string time:
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+background.solid: black
+border-bottom-width.px: 2
+border-color: grey
+
+
+-- ftd.text: $event.date
+color: grey
+role: $inherited.types.heading-tiny
+role if { ftd.device == "mobile" }: $inherited.types.fine-print
+text-align: center
+
+-- ftd.text: $event.place
+color: grey
+role: $inherited.types.heading-tiny
+role if { ftd.device == "mobile" }: $inherited.types.fine-print
+text-align: center
+
+-- ftd.column:
+margin-bottom.px: 16
+
+-- ftd.text: $event.time
+color: grey
+role: $inherited.types.heading-small
+role if { ftd.device == "mobile" }: $inherited.types.copy-small
+text-align: center
+
+-- ftd.text: $event.location
+color: grey
+role: $inherited.types.heading-small
+role if { ftd.device == "mobile" }: $inherited.types.copy-small
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: event
+
+
+
+
+
+
+
+
+
+
+-- component events:
+caption title:
+children child:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.vw: 2
+
+-- ftd.text: $events.title
+role: $inherited.types.heading-large
+color: grey
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.vw: 2
+children: $events.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: events
+
+
+
+
+
+
+
+
+
+
+
 -- component web3-page:
 ftd.image-src logo:
 string cta-text-1:
@@ -280,6 +475,10 @@ string sub-title:
 string cta-button:
 string button-link-1:
 boolean $is-active-1: false
+ftd.image-src about-cover:
+string about-heading:
+body about:
+children event-child:
 
 -- ftd.column:
 width: fill-container
@@ -304,10 +503,16 @@ cta-link-5: $web3-page.cta-link-5
 -- end: ftd.row
 
 -- ftd.column:
+width: fill-container
+background.solid: black
+
+-- ftd.column:
 if: { ftd.device == "desktop" }
 width: fill-container
 spacing.fixed.vw: 2
 background.solid: black
+border-color: grey
+border-bottom-width.px: 2
 padding.vw: 4
 
 -- ftd.text: $web3-page.title
@@ -365,6 +570,31 @@ $on-mouse-enter$: $ftd.set-bool($a = $web3-page.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $web3-page.is-active-1, v = false)
 color: black
 link: $web3-page.button-link-1
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+height: auto
+background.solid: black
+align-content: center
+
+-- hero-1: 
+cover: $web3-page.about-cover
+headline: $web3-page.about-heading
+content: $web3-page.about
+
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+background.solid: black
+padding.vw: 2
+children: $web3-page.event-child
+
 
 -- end: ftd.column
 

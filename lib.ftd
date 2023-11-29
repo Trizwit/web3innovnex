@@ -112,27 +112,27 @@ spacing: space-between
 padding-top.px: 36
 
 -- ftd.text: $desk-navbar.cta-text-1
-role: $inherited.types.heading-small
+role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-1
 
 -- ftd.text: $desk-navbar.cta-text-2
-role: $inherited.types.heading-small
+role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-2
 
 -- ftd.text: $desk-navbar.cta-text-3
-role: $inherited.types.heading-small
+role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-3
 
 -- ftd.text: $desk-navbar.cta-text-4
-role: $inherited.types.heading-small
+role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-4
 
 -- ftd.text: $desk-navbar.cta-text-5
-role: $inherited.types.heading-small
+role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-5
 

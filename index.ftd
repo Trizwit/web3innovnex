@@ -31,10 +31,10 @@ location: Draper Startup House For Entrepreneurs Bengaluru
 time: 5:00PM – 9:00PM 
 
 -- lib.event:
-date: JAN 11, 2024
+date: JAN, 2024
 place: HYDERABAD
-location: Draper Startup House For Entrepreneurs Bengaluru
-time: 5:00PM – 9:00PM  
+location: Upcoming Event
+time: To Be Announced
 
 -- lib.event:
 date: FEB, 2024
@@ -57,6 +57,42 @@ time: To Be Announced
 -- lib.event:
 date: MAY, 2024
 place: JAIPUR
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: JUN, 2024
+place: DELHI
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: JUL, 2024
+place: KOLKATA
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: AUG, 2024
+place: BALI
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: SEP, 2024
+place: SINGAPORE
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: OCT, 2024
+place: CHENNAI
+location: Upcoming Event
+time: To Be Announced 
+
+-- lib.event:
+date: NOV, 2024
+place: TOKYO
 location: Upcoming Event
 time: To Be Announced 
 

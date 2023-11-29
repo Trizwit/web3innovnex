@@ -92,7 +92,7 @@ width: fill-container
 spacing.fixed.vw: 28
 border-color: grey
 border-bottom-width.px: 2
-background.solid: black
+background.solid: #000
 padding.px: 32
 
 -- ftd.row:
@@ -113,27 +113,27 @@ padding-top.px: 36
 
 -- ftd.text: $desk-navbar.cta-text-1
 role: $inherited.types.heading-small
-color: grey
+color: #b7ab98
 link: $desk-navbar.cta-link-1
 
 -- ftd.text: $desk-navbar.cta-text-2
 role: $inherited.types.heading-small
-color: grey
+color: #b7ab98
 link: $desk-navbar.cta-link-2
 
 -- ftd.text: $desk-navbar.cta-text-3
 role: $inherited.types.heading-small
-color: grey
+color: #b7ab98
 link: $desk-navbar.cta-link-3
 
 -- ftd.text: $desk-navbar.cta-text-4
 role: $inherited.types.heading-small
-color: grey
+color: #b7ab98
 link: $desk-navbar.cta-link-4
 
 -- ftd.text: $desk-navbar.cta-text-5
 role: $inherited.types.heading-small
-color: grey
+color: #b7ab98
 link: $desk-navbar.cta-link-5
 
 -- end: ftd.row
@@ -159,7 +159,7 @@ ftd.image-src logo:
 width: fill-container
 height: hug-content
 spacing: space-between
-background.solid: black
+background.solid: #000
 border-color: grey
 border-bottom-width.px: 2
 padding.px: 10
@@ -205,7 +205,7 @@ string cta-link-5:
 if: {menu-open}
 width: fill-container
 spacing.fixed.vw: 28
-background.solid: black
+background.solid: #000
 padding.px: 32
 
 
@@ -217,27 +217,27 @@ padding-top.px: 36
 
 -- ftd.text: $drop-navbar.cta-text-1
 role: $inherited.types.heading-tiny
-color: grey
+color: #b7ab98
 link: $drop-navbar.cta-link-1
 
 -- ftd.text: $drop-navbar.cta-text-2
 role: $inherited.types.heading-tiny
-color: grey
+color: #b7ab98
 link: $drop-navbar.cta-link-2
 
 -- ftd.text: $drop-navbar.cta-text-3
 role: $inherited.types.heading-tiny
-color: grey
+color: #b7ab98
 link: $drop-navbar.cta-link-3
 
 -- ftd.text: $drop-navbar.cta-text-4
 role: $inherited.types.heading-tiny
-color: grey
+color: #b7ab98
 link: $drop-navbar.cta-link-4
 
 -- ftd.text: $drop-navbar.cta-text-5
 role: $inherited.types.heading-tiny
-color: grey
+color: #b7ab98
 link: $drop-navbar.cta-link-5
 
 -- end: ftd.column
@@ -277,7 +277,7 @@ width: fill-container
 height: hug-content
 align-content: center
 padding-vertical.px if { ftd.device == "desktop" }: 80
-background.solid: #000
+background.solid: #0d0d0d
 
 
 -- ftd.column:
@@ -302,13 +302,13 @@ margin-left.px: 60
 -- ftd.text: $hero-1.headline
 margin-bottom.px: 16
 role: $inherited.types.heading-medium
-color: grey
+color: #b7ab98
 
 
 -- ftd.text: $hero-1.content
 margin-bottom.px: 32
 role: $inherited.types.heading-tiny
-color: #fff
+color: #b7ab98
 
 
 -- end: ftd.column
@@ -325,7 +325,7 @@ height: hug-content
 align-content: center
 padding-horizontal.px: 15
 padding-vertical.px: 20
-background.solid: #000
+background.solid: #0d0d0d
 
 -- ftd.image:
 src: $hero-1.cover   
@@ -342,13 +342,13 @@ margin-top.px: 20
 -- ftd.text: $hero-1.headline
 margin-bottom.px: 16
 role: $inherited.types.heading-small
-color: grey
+color: #b7ab98
 
 
 -- ftd.text: $hero-1.content
 margin-bottom.px: 32
 role: $inherited.types.heading-tiny
-color: #fff
+color: #b7ab98
 
 
 -- end: ftd.column
@@ -374,38 +374,50 @@ string date:
 string place:
 string location:
 string time:
+boolean $hover: false
 
 -- ftd.row:
 width: fill-container
+height.fixed.vw if {event.hover}: 12
 spacing: space-between
-background.solid: black
+background.solid: #0d0d0d
 border-bottom-width.px: 2
 border-color: grey
+padding.vw: 2
+background.solid if {event.hover}: #eb5939
+$on-mouse-enter$: $ftd.set-bool($a = $event.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $event.hover, v = false)
 
 
 -- ftd.text: $event.date
-color: grey
+color: #b7ab98
+color if {event.hover}: #000
 role: $inherited.types.heading-tiny
 role if { ftd.device == "mobile" }: $inherited.types.fine-print
 text-align: center
 
 -- ftd.text: $event.place
-color: grey
+color: #b7ab98
+color if {event.hover}: #000
 role: $inherited.types.heading-tiny
 role if { ftd.device == "mobile" }: $inherited.types.fine-print
 text-align: center
 
 -- ftd.column:
+width.fixed.vw: 36
 margin-bottom.px: 16
+align-content: center
 
 -- ftd.text: $event.time
-color: grey
+color: #b7ab98
+color if {event.hover}: #000
 role: $inherited.types.heading-small
 role if { ftd.device == "mobile" }: $inherited.types.copy-small
 text-align: center
 
 -- ftd.text: $event.location
-color: grey
+color: #b7ab98
+color if {event.hover}: #000
 role: $inherited.types.heading-small
 role if { ftd.device == "mobile" }: $inherited.types.copy-small
 text-align: center
@@ -433,13 +445,15 @@ children child:
 width: fill-container
 spacing.fixed.vw: 2
 
+
 -- ftd.text: $events.title
 role: $inherited.types.heading-large
-color: grey
+color: #b7ab98
+margin-left.px: 20
+margin-left.px if { ftd.device == "mobile" }: 4
 
 -- ftd.column:
 width: fill-container
-spacing.fixed.vw: 2
 children: $events.child
 
 -- end: ftd.column
@@ -504,26 +518,26 @@ cta-link-5: $web3-page.cta-link-5
 
 -- ftd.column:
 width: fill-container
-background.solid: black
+background.solid: #0d0d0d
 
 -- ftd.column:
 if: { ftd.device == "desktop" }
 width: fill-container
 spacing.fixed.vw: 2
-background.solid: black
+background.solid: #0d0d0d
 border-color: grey
 border-bottom-width.px: 2
 padding.vw: 4
 
 -- ftd.text: $web3-page.title
 role: $inherited.types.heading-hero
-color: grey
+color: #b7ab98
 padding-right.vw: 20
 padding-top.vw: 2
 
 -- ftd.text: $web3-page.sub-title
 role: $inherited.types.heading-small
-color: grey
+color: #b7ab98
 
 -- ftd.text: $web3-page.cta-button
 role: $inherited.types.button-medium
@@ -536,7 +550,7 @@ background.solid: orange
 background.solid if {web3-page.is-active-1}: pink
 $on-mouse-enter$: $ftd.set-bool($a = $web3-page.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $web3-page.is-active-1, v = false)
-color: black
+color: #0d0d0d
 link: $web3-page.button-link-1
 
 -- end: ftd.column
@@ -545,18 +559,18 @@ link: $web3-page.button-link-1
 if: { ftd.device == "mobile" }
 width: fill-container
 spacing.fixed.vw: 4
-background.solid: black
+background.solid: #0d0d0d
 padding.vw: 4
 
 -- ftd.text: $web3-page.title
 role: $inherited.types.heading-large
-color: grey
+color: #b7ab98
 padding-right.vw: 10
 padding-top.vw: 2
 
 -- ftd.text: $web3-page.sub-title
 role: $inherited.types.heading-small
-color: grey
+color: #b7ab98
 
 -- ftd.text: $web3-page.cta-button
 role: $inherited.types.button-medium
@@ -568,7 +582,7 @@ background.solid: orange
 background.solid if {web3-page.is-active-1}: pink
 $on-mouse-enter$: $ftd.set-bool($a = $web3-page.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $web3-page.is-active-1, v = false)
-color: black
+color: #0d0d0d
 link: $web3-page.button-link-1
 
 -- end: ftd.column
@@ -578,7 +592,7 @@ link: $web3-page.button-link-1
 -- ftd.column:
 width: fill-container
 height: auto
-background.solid: black
+background.solid: #0d0d0d
 align-content: center
 
 -- hero-1: 
@@ -591,7 +605,7 @@ content: $web3-page.about
 
 -- ftd.column:
 width: fill-container
-background.solid: black
+background.solid: #0d0d0d
 padding.vw: 2
 children: $web3-page.event-child
 

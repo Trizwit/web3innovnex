@@ -13,35 +13,15 @@ cta-link-5: https://trizui.trizwit.com/
 title: **Welcome To Web3 Innovators Nexus Journey**
 sub-title: Build and Grow together
 cta-button: **Join Us**
-button-link-1: https://trizui.trizwit.com/
-about-cover: $assets.files.assets.about.jpg
-about-heading: About Us
-net-heading: Networking
-net-title-1: Knowledge Sharing
-net-title-2: Partnerships and Collaborations
-net-title-3: Mentorship and Guidance
-net-title-4: Validation and Feedback
-net-title-5: Emotional Support
-net-title-6: Access to Opportunities
-net-title-7: Market Insights
-net-content-1: Networking facilitates the exchange of insights, knowledge, and experiences among founders, enabling them to make informed decisions and learn from each other.
-net-content-2: Founders can discover potential partners within their network, fostering collaborations that harness complementary strengths and resources.
-net-content-3: Networking connects founders with mentors and advisors who offer guidance and support, particularly beneficial for those starting out.
-net-content-4: Feedback from peers in the network helps founders refine their ideas, products, and strategies.
-net-content-5: Founders often face challenges and stress, and networking provides emotional support and a sense of community.
-net-content-6: Networking opens doors to funding sources, investors, customers, job candidates, and resources essential for growth.
-net-content-7: A network keeps founders updated on market trends, helping them remain competitive and innovative in their ventures.
-contact-heading: Join Us
-contact-text-1: Name
-contact-text-2: Email
-contact-text-3: Phone Number
-contact-text-4: City
-contact-text-5: Message
-contact-button-text: SUBMIT
+button-link-1: https://trizui.trizwit.com/ 
 
-We empower Web3 founders to spread their wings and grow.
+
+-- lib.hero-1: 
+cover: $assets.files.assets.about.jpg
+headline: About Us
+
+We empower Web3 founders to spread their wings and grow. 
 We wholeheartedly embrace the vital role of community support in propelling our founders to new heights.
-
 
 -- lib.events:
 title: Events
@@ -179,6 +159,59 @@ button-link: https://trizui.trizwit.com/
 
 We recognize that in the Web3 journey, the right mentor at the right time can make all the difference. Join us on this 
 transformative journey with a mentor who understands your unique path and aspirations, pushing your goals to the next level.
+
+-- lib.network:
+heading: Networking
+
+-- lib.network-comp:
+title: Knowledge Sharing
+
+Networking facilitates the exchange of insights, knowledge, and experiences among founders, 
+enabling them to make informed decisions and learn from each other.
+
+-- lib.network-comp:
+title: Partnerships and Collaborations
+
+Founders can discover potential partners within their network, 
+fostering collaborations that harness complementary strengths and resources.
+
+-- lib.network-comp:
+title: Mentorship and Guidance
+
+Networking connects founders with mentors and advisors who offer guidance and support, 
+particularly beneficial for those starting out.
+
+-- lib.network-comp:
+title: Validation and Feedback
+
+Feedback from peers in the network helps founders refine their ideas, products, and strategies.
+
+-- lib.network-comp:
+title: Emotional Support
+
+Founders often face challenges and stress, and networking provides emotional support and a sense of community.
+
+-- lib.network-comp:
+title: Access to Opportunities
+
+Networking opens doors to funding sources, investors, customers, job candidates, and resources essential for growth.
+
+-- lib.network-comp:
+title: Market Insights
+
+A network keeps founders updated on market trends, helping them remain competitive and innovative in their ventures.
+
+-- end: lib.network
+
+-- lib.contact-1:
+contact-heading: Join Us
+contact-text-1: Name
+contact-text-2: Email
+contact-text-3: Phone Number
+contact-text-4: City
+contact-text-5: Message
+contact-button-text: SUBMIT
+contact-button-link: https://trizui.trizwit.com/ 
 
 
 -- end: lib.web3-page

@@ -676,7 +676,7 @@ fit: contain
 
 -- component network-comp:
 string title:
-string content:
+body content:
 
 -- ftd.column:
 width.fixed.vw: 28
@@ -709,20 +709,7 @@ text-align: center
 
 -- component network:
 caption heading:
-string title-1:
-string title-2:
-string title-3:
-string title-4:
-string title-5:
-string title-6:
-string title-7:
-string content-1:
-string content-2:
-string content-3:
-string content-4:
-string content-5:
-string content-6:
-string content-7: 
+children network-child:
 
 -- ftd.column:
 width: fill-container
@@ -743,139 +730,7 @@ width: fill-container
 align-content: center
 spacing.fixed.vw: 1
 wrap: true
-
--- ftd.column:
-width.fixed.vw: 28
-height.fixed.vw: 12
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-1
-role: $inherited.types.heading-small
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-1
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw: 28
-height.fixed.vw: 12
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-2
-role: $inherited.types.heading-small
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-2
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw: 28
-height.fixed.vw: 12
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-3
-role: $inherited.types.heading-small
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-3
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw: 28
-height.fixed.vw: 12
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-4
-role: $inherited.types.heading-small
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-4
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw: 28
-height.fixed.vw: 12
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-5
-role: $inherited.types.heading-small
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-5
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw: 28
-height.fixed.vw: 12
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-6
-role: $inherited.types.heading-small
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-6
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw: 28
-height.fixed.vw: 12
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-7
-role: $inherited.types.heading-small
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-7
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
+children: $network.network-child
 
 
 -- end: ftd.row
@@ -895,139 +750,7 @@ color: #b7ab98
 -- ftd.column:
 width: fill-container
 align-content: center
-
--- ftd.column:
-width.fixed.vw: 88
-height.fixed.vw: 40
-align-content: center
-spacing.fixed.vw: 1
-
-
--- ftd.text: $network.title-1
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-1
-role: $inherited.types.fine-print
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw:  88
-height.fixed.vw: 40
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-2
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-2
-role: $inherited.types.fine-print
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw:  88
-height.fixed.vw: 40
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-3
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-3
-role: $inherited.types.fine-print
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw:  88
-height.fixed.vw: 40
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-4
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-4
-role: $inherited.types.fine-print
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw:  88
-height.fixed.vw: 40
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-5
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-5
-role: $inherited.types.fine-print
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw:  88
-height.fixed.vw: 40
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-6
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-6
-role: $inherited.types.fine-print
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw:  88
-height.fixed.vw: 40
-align-content: center
-spacing.fixed.vw: 1
-padding.vw: 1
-
--- ftd.text: $network.title-7
-role: $inherited.types.heading-tiny
-color: #b7ab98
-text-align: center
-
--- ftd.text: $network.content-7
-role: $inherited.types.fine-print
-color: #b7ab98
-text-align: center
-
--- end: ftd.column
+children: $network.network-child
 
 
 -- end: ftd.column
@@ -1057,6 +780,7 @@ string contact-text-3:
 string contact-text-4:
 string contact-text-5:
 string contact-button-text:
+string contact-button-link:
 boolean $hover-text-1: false
 boolean $hover-text-2: false
 boolean $hover-text-3: false
@@ -1170,13 +894,14 @@ color: #b7ab98
 
 -- ftd.text: $contact-1.contact-button-text
 role: $inherited.types.heading-small
-color: #fff
+color: #b7ab98
 margin-top.px: 30
 align-self: end
 margin-right.px: 120
-color if {contact-1.hover-button}: #b7ab98
+color if {contact-1.hover-button}: #fff
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-button, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-button, v = false)
+link: $contact-1.contact-button-link
 
 -- end: ftd.column
 
@@ -1429,32 +1154,7 @@ string sub-title:
 string cta-button:
 string button-link-1:
 boolean $is-active-1: false
-ftd.image-src about-cover:
-string about-heading:
-body about:
 children event-child:
-string net-heading:
-string net-title-1:
-string net-title-2:
-string net-title-3:
-string net-title-4:
-string net-title-5:
-string net-title-6:
-string net-title-7:
-string net-content-1:
-string net-content-2:
-string net-content-3:
-string net-content-4:
-string net-content-5:
-string net-content-6:
-string net-content-7:
-string contact-heading:
-string contact-text-1:
-string contact-text-2:
-string contact-text-3:
-string contact-text-4:
-string contact-text-5:
-string contact-button-text:
 
 
 -- ftd.column:
@@ -1553,19 +1253,6 @@ link: $web3-page.button-link-1
 
 -- end: ftd.column
 
--- ftd.column:
-width: fill-container
-height: auto
-background.solid: #0d0d0d
-align-content: center
-
--- hero-1: 
-cover: $web3-page.about-cover
-headline: $web3-page.about-heading
-content: $web3-page.about
-
-
--- end: ftd.column
 
 -- ftd.column:
 width: fill-container
@@ -1576,44 +1263,13 @@ children: $web3-page.event-child
 
 -- end: ftd.column
 
--- ftd.column:
-width: fill-container
-height: auto
-background.solid: #0d0d0d
-align-content: center
-
--- network:
-heading: $web3-page.net-heading
-title-1: $web3-page.net-title-1
-title-2: $web3-page.net-title-2
-title-3: $web3-page.net-title-3
-title-4: $web3-page.net-title-4
-title-5: $web3-page.net-title-5
-title-6: $web3-page.net-title-6
-title-7: $web3-page.net-title-7
-content-1: $web3-page.net-content-1
-content-2: $web3-page.net-content-2
-content-3: $web3-page.net-content-3
-content-4: $web3-page.net-content-4
-content-5: $web3-page.net-content-5
-content-6: $web3-page.net-content-6
-content-7: $web3-page.net-content-7
-
--- end: ftd.column
 
 -- ftd.column:
 width: fill-container
 margin-top.px: 40
 background.solid: #0d0d0d
 
--- contact-1:
-contact-heading: $web3-page.contact-heading
-contact-text-1: $web3-page.contact-text-1
-contact-text-2: $web3-page.contact-text-2
-contact-text-3: $web3-page.contact-text-3
-contact-text-4: $web3-page.contact-text-4
-contact-text-5: $web3-page.contact-text-5
-contact-button-text: $web3-page.contact-button-text
+
 
 -- end: ftd.column
 

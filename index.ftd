@@ -16,21 +16,6 @@ cta-button: **Join Us**
 button-link-1: https://trizui.trizwit.com/
 about-cover: $assets.files.assets.about.jpg
 about-heading: About Us
-part-heading: Previous Partners
-part-logo-1: $assets.files.assets.p-logo-1.jpg
-part-logo-2: $assets.files.assets.p-logo-2.jpg
-part-logo-3: $assets.files.assets.p-logo-3.jpg
-part-logo-4: $assets.files.assets.p-logo-4.jpg
-part-logo-5: $assets.files.assets.p-logo-5.jpg
-part-logo-6: $assets.files.assets.p-logo-6.jpg
-part-logo-7: $assets.files.assets.p-logo-7.jpg
-part-logo-8: $assets.files.assets.p-logo-8.jpg
-part-logo-9: $assets.files.assets.p-logo-9.jpg
-part-logo-10: $assets.files.assets.p-logo-10.jpg
-mentorship-caption: Mentorship Program
-mentorship-button: Join Mentorship
-mentorship-link: https://trizui.trizwit.com/
-mentorship-image: $assets.files.assets.hero-2.jpg
 net-heading: Networking
 net-title-1: Knowledge Sharing
 net-title-2: Partnerships and Collaborations
@@ -134,6 +119,67 @@ location: Upcoming Event
 time: To Be Announced 
 
 -- end: lib.events
+
+-- lib.partners-section: Previous Partners
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-1.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-2.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-3.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-4.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-5.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-6.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-7.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-8.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-9.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-10.jpg
+
+
+-- end: lib.partners-section
+
+-- lib.online-events:
+title: Online Events
+
+-- lib.online-event-comp:
+event: $assets.files.assets.online-event.jpg
+event-link: https://www.linkedin.com/
+
+-- lib.online-event-comp:
+event: $assets.files.assets.online-event.jpg
+event-link: https://www.linkedin.com/
+
+-- lib.online-event-comp:
+event: $assets.files.assets.online-event.jpg
+event-link: https://www.linkedin.com/
+
+-- end: lib.online-events
+
+-- lib.hero-2: Mentorship Program
+cover: $assets.files.assets.hero-2.jpg
+cta-button: Join Mentorship
+button-link: https://trizui.trizwit.com/
+
+We recognize that in the Web3 journey, the right mentor at the right time can make all the difference. Join us on this 
+transformative journey with a mentor who understands your unique path and aspirations, pushing your goals to the next level.
+
 
 -- end: lib.web3-page
 

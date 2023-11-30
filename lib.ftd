@@ -1288,7 +1288,7 @@ border-color: #b7ab98
 padding.vw: 4
 padding-left.px: 20
 wrap: true
-align-content: center
+
 
 
 -- ftd.column:
@@ -1300,7 +1300,7 @@ spacing.fixed.vw: 2
 -- ftd.text: $footer.caption-1
 role: $inherited.types.heading-medium 
 role if {ftd.device == "mobile"}: $inherited.types.heading-small
-color: #fff;;#b7ab98
+color: #b7ab98
 
 -- ftd.text: $footer.caption-text-1
 role: $inherited.types.heading-small
@@ -1338,7 +1338,7 @@ spacing.fixed.vw: 2
 -- ftd.text: $footer.caption-2
 role: $inherited.types.heading-medium 
 role if {ftd.device == "mobile"}: $inherited.types.heading-small
-color: #fff;;#b7ab98
+color: #b7ab98
 
 -- ftd.row:
 spacing.fixed.vw: 2
@@ -1369,7 +1369,7 @@ spacing.fixed.vw: 2
 -- ftd.text: $footer.caption-3
 role: $inherited.types.heading-medium 
 role if {ftd.device == "mobile"}: $inherited.types.heading-small
-color: #fff;;#b7ab98
+color: #b7ab98
 
 -- ftd.image:
 src: $footer.caption-logo-3

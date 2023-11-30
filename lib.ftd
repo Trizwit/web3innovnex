@@ -341,7 +341,7 @@ margin-top.px: 20
 
 -- ftd.text: $hero-1.headline
 margin-bottom.px: 16
-role: $inherited.types.heading-small
+role: $inherited.types.heading-medium
 color: #b7ab98
 
 
@@ -448,6 +448,7 @@ spacing.fixed.vw: 2
 
 -- ftd.text: $events.title
 role: $inherited.types.heading-large
+role if { ftd.device == "mobile" }: $inherited.types.heading-medium
 color: #b7ab98
 margin-left.px: 20
 margin-left.px if { ftd.device == "mobile" }: 4
@@ -461,6 +462,730 @@ children: $events.child
 -- end: ftd.column
 
 -- end: events
+
+
+
+
+
+
+
+
+
+
+-- component hero-2:
+ftd.image-src cover:
+caption headline:
+string button-link:
+string cta-button:
+boolean $hero-hover: false
+body content:
+
+
+-- ftd.column:
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
+width: fill-container
+height: hug-content
+align-content: center
+padding-vertical.px if { ftd.device == "desktop" }: 96
+background.solid: #0d0d0d
+
+-- ftd.column:
+width.fixed.percent: 40
+align-content: left
+align-self: center
+margin-right.px: 60
+
+-- ftd.text: $hero-2.headline
+margin-bottom.px: 16
+role: $inherited.types.heading-medium
+color: #b7ab98
+
+-- ftd.text: $hero-2.content
+margin-bottom.px: 32
+role: $inherited.types.heading-tiny
+color: #b7ab98
+
+-- ftd.text: $hero-2.cta-button
+role: $inherited.types.button-medium
+text-align: center
+width.fixed.vw: 12
+padding-vertical.px: 12
+margin-top.px: 20
+border-radius.px: 4
+background.solid: orange
+background.solid if {hero-2.hero-hover}: pink
+$on-mouse-enter$: $ftd.set-bool($a = $hero-2.hero-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-2.hero-hover, v = false)
+color: #0d0d0d
+link: $hero-2.button-link
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 45
+height: auto
+align-content: center
+
+-- ftd.image:
+src: $hero-2.cover   
+width.fixed.percent: 100
+height: auto 
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+height: hug-content
+align-content: center
+padding-horizontal.px: 15
+padding-vertical.px: 20
+background.solid: #0d0d0d
+spacing.fixed.vw: 12
+
+-- ftd.column:
+width: fill-container
+align-content: left
+align-self: center
+margin-left.px: 10
+margin-top.px: 20
+
+-- ftd.text: $hero-2.headline
+margin-bottom.px: 16
+role: $inherited.types.heading-medium
+color: #b7ab98
+
+-- ftd.text: $hero-2.content
+margin-bottom.px: 32
+role: $inherited.types.heading-tiny
+color: #b7ab98
+
+-- ftd.text: $hero-2.cta-button
+role: $inherited.types.button-medium
+text-align: center
+width.fixed.vw: 40
+padding-vertical.px: 6
+border-radius.px: 4
+background.solid: orange
+background.solid if {hero-2.hero-hover}: pink
+$on-mouse-enter$: $ftd.set-bool($a = $hero-2.hero-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $hero-2.hero-hover, v = false)
+color: #0d0d0d
+link: $hero-2.button-link
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $hero-2.cover   
+width.fixed.percent: 100
+height: auto 
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: hero-2
+
+
+
+
+
+
+
+
+
+
+-- component partners:
+caption heading:
+ftd.image-src part-logo-1:
+ftd.image-src part-logo-2:
+ftd.image-src part-logo-3:
+ftd.image-src part-logo-4:
+ftd.image-src part-logo-5:
+ftd.image-src part-logo-6:
+ftd.image-src part-logo-7:
+ftd.image-src part-logo-8:
+ftd.image-src part-logo-9:
+ftd.image-src part-logo-10:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.vw: 4
+
+-- ftd.text: $partners.heading
+role: $inherited.types.heading-large
+role if { ftd.device == "mobile" }: $inherited.types.heading-medium
+color: #b7ab98
+margin-left.px: 20
+margin-left.px if { ftd.device == "mobile" }: 8
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.vw: 4
+
+-- ftd.image:
+src: $partners.part-logo-1
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- ftd.image:
+src: $partners.part-logo-2
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- ftd.image:
+src: $partners.part-logo-3
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- ftd.image:
+src: $partners.part-logo-4
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- ftd.image:
+src: $partners.part-logo-5
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.vw: 4
+
+-- ftd.image:
+src: $partners.part-logo-6
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- ftd.image:
+src: $partners.part-logo-7
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- ftd.image:
+src: $partners.part-logo-8
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- ftd.image:
+src: $partners.part-logo-9
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- ftd.image:
+src: $partners.part-logo-10
+width.fixed.vw: 14
+height.fixed.vw: 14
+border-radius.percent: 50
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: partners
+
+
+
+
+
+
+
+
+
+
+-- component network:
+caption heading:
+string title-1:
+string title-2:
+string title-3:
+string title-4:
+string title-5:
+string title-6:
+string title-7:
+string content-1:
+string content-2:
+string content-3:
+string content-4:
+string content-5:
+string content-6:
+string content-7: 
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
+spacing.fixed.vw: 2
+align-content: center
+
+-- ftd.text: $network.heading
+role: $inherited.types.heading-medium
+color: #b7ab98
+;;margin-left.vw: 6
+
+-- ftd.row:
+width: fill-container
+align-content: center
+spacing.fixed.vw: 1
+wrap: true
+
+-- ftd.column:
+width.fixed.vw: 28
+height.fixed.vw: 12
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-1
+role: $inherited.types.heading-small
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-1
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 28
+height.fixed.vw: 12
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-2
+role: $inherited.types.heading-small
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-2
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 28
+height.fixed.vw: 12
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-3
+role: $inherited.types.heading-small
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-3
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 28
+height.fixed.vw: 12
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-4
+role: $inherited.types.heading-small
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-4
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 28
+height.fixed.vw: 12
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-5
+role: $inherited.types.heading-small
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-5
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 28
+height.fixed.vw: 12
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-6
+role: $inherited.types.heading-small
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-6
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 28
+height.fixed.vw: 12
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-7
+role: $inherited.types.heading-small
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-7
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+spacing.fixed.vw: 4
+align-content: center
+
+-- ftd.text: $network.heading
+role: $inherited.types.heading-medium
+color: #b7ab98
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width.fixed.vw: 88
+height.fixed.vw: 40
+align-content: center
+spacing.fixed.vw: 1
+
+
+-- ftd.text: $network.title-1
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-1
+role: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw:  88
+height.fixed.vw: 40
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-2
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-2
+role: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw:  88
+height.fixed.vw: 40
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-3
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-3
+role: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw:  88
+height.fixed.vw: 40
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-4
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-4
+role: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw:  88
+height.fixed.vw: 40
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-5
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-5
+role: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw:  88
+height.fixed.vw: 40
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-6
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-6
+role: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw:  88
+height.fixed.vw: 40
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network.title-7
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network.content-7
+role: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: network
+
+
+
+
+
+
+
+
+
+
+
+
+-- component contact-1:
+string contact-heading:
+string contact-text-1:
+string contact-text-2:
+string contact-text-3:
+string contact-text-4:
+string contact-text-5:
+string contact-button-text:
+boolean $hover-text-1: false
+boolean $hover-text-2: false
+boolean $hover-text-3: false
+boolean $hover-text-4: false
+boolean $hover-text-5: false
+boolean $hover-button: false
+
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+padding-horizontal.percent: 8
+background.solid: #0d0d0d
+spacing: space-evenly
+id: contact-1
+
+
+
+-- ftd.column:
+width: fill-container
+padding-right.px if {ftd.device == "desktop"}: 120
+spacing.fixed.px: 20
+align-content if {ftd.device == "mobile"}: center
+
+-- ftd.text: $contact-1.contact-heading
+role: $inherited.types.heading-medium
+color: #b7ab98
+margin-top.px if {ftd.device == "mobile"}: 50
+
+-- ftd.text-input:
+placeholder: $contact-1.contact-text-1
+width: fill-container
+padding-vertical.px: 8
+padding-horizontal.px: 16
+border-bottom-width.px: 1
+border-color if {contact-1.hover-text-1}: #b7ab98
+border-color: #000
+type: text
+role: $inherited.types.heading-tiny
+background.solid: #0d0d0d
+$on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-1, v = false)
+color: #b7ab98
+
+-- ftd.text-input:
+placeholder: $contact-1.contact-text-2
+width: fill-container
+padding-vertical.px: 8
+padding-horizontal.px: 16
+border-bottom-width.px: 1
+border-color if {contact-1.hover-text-2}: #b7ab98
+border-color: #000
+type: text
+role: $inherited.types.heading-tiny
+background.solid: #0d0d0d
+$on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-2, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-2, v = false)
+color: #b7ab98
+
+-- ftd.text-input:
+placeholder: $contact-1.contact-text-3
+width: fill-container
+padding-vertical.px: 8
+padding-horizontal.px: 16
+border-bottom-width.px: 1
+border-color if {contact-1.hover-text-3}: #b7ab98
+border-color: #000
+type: text
+role: $inherited.types.heading-tiny
+background.solid: #0d0d0d
+$on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-3, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-3, v = false)
+color: #b7ab98
+
+-- ftd.text-input:
+placeholder: $contact-1.contact-text-4
+width: fill-container
+padding-vertical.px: 8
+padding-horizontal.px: 16
+border-bottom-width.px: 1
+border-color if {contact-1.hover-text-4}: #b7ab98
+border-color: #000
+type: text
+role: $inherited.types.heading-tiny
+background.solid: #0d0d0d
+$on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-4, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-4, v = false)
+color: #b7ab98
+
+
+-- end: ftd.column
+
+
+-- ftd.text-input:
+width: fill-container
+height.fixed.px: 110
+placeholder: $contact-1.contact-text-5
+multiline: true
+margin-top.px: 30
+padding-vertical.px: 8
+padding-horizontal.px: 16
+border-bottom-width.px: 1
+border-color if {contact-1.hover-text-5}: #b7ab98
+border-color: #000
+type: text
+role: $inherited.types.heading-tiny
+background.solid: #0d0d0d
+$on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-5, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-5, v = false)
+color: #b7ab98
+
+-- ftd.text: $contact-1.contact-button-text
+role: $inherited.types.heading-small
+color: #fff
+margin-top.px: 30
+align-self: end
+margin-right.px: 120
+color if {contact-1.hover-button}: #b7ab98
+$on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-button, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-button, v = false)
+
+-- end: ftd.column
+
+-- end: contact-1
+
 
 
 
@@ -493,10 +1218,49 @@ ftd.image-src about-cover:
 string about-heading:
 body about:
 children event-child:
+string part-heading:
+ftd.image-src part-logo-1:
+ftd.image-src part-logo-2:
+ftd.image-src part-logo-3:
+ftd.image-src part-logo-4:
+ftd.image-src part-logo-5:
+ftd.image-src part-logo-6:
+ftd.image-src part-logo-7:
+ftd.image-src part-logo-8:
+ftd.image-src part-logo-9:
+ftd.image-src part-logo-10:
+string mentorship-caption:
+string mentorship-button:
+string mentorship-link:
+ftd.image-src mentorship-image:
+string net-heading:
+string net-title-1:
+string net-title-2:
+string net-title-3:
+string net-title-4:
+string net-title-5:
+string net-title-6:
+string net-title-7:
+string net-content-1:
+string net-content-2:
+string net-content-3:
+string net-content-4:
+string net-content-5:
+string net-content-6:
+string net-content-7:
+string contact-heading:
+string contact-text-1:
+string contact-text-2:
+string contact-text-3:
+string contact-text-4:
+string contact-text-5:
+string contact-button-text:
+
 
 -- ftd.column:
 width: fill-container
 height: fill-container
+background.solid: #0d0d0d
 
 -- ftd.row: 
 width: fill-container
@@ -609,6 +1373,83 @@ background.solid: #0d0d0d
 padding.vw: 2
 children: $web3-page.event-child
 
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+background.solid: #0d0d0d
+padding.vw: 4
+
+-- partners:
+heading: $web3-page.part-heading
+part-logo-1: $web3-page.part-logo-1
+part-logo-2: $web3-page.part-logo-2
+part-logo-3: $web3-page.part-logo-3
+part-logo-4: $web3-page.part-logo-4
+part-logo-5: $web3-page.part-logo-5
+part-logo-6: $web3-page.part-logo-6
+part-logo-7: $web3-page.part-logo-7
+part-logo-8: $web3-page.part-logo-8
+part-logo-9: $web3-page.part-logo-9
+part-logo-10: $web3-page.part-logo-10
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+height: auto
+background.solid: #0d0d0d
+align-content: center
+
+-- hero-2: $web3-page.mentorship-caption
+cover: $web3-page.mentorship-image
+cta-button: $web3-page.mentorship-button
+button-link: $web3-page.mentorship-link
+
+We recognize that in the Web3 journey, the right mentor at the right time can make all the difference. Join us on this 
+transformative journey with a mentor who understands your unique path and aspirations, pushing your goals to the next level.
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+height: auto
+background.solid: #0d0d0d
+align-content: center
+
+-- network:
+heading: $web3-page.net-heading
+title-1: $web3-page.net-title-1
+title-2: $web3-page.net-title-2
+title-3: $web3-page.net-title-3
+title-4: $web3-page.net-title-4
+title-5: $web3-page.net-title-5
+title-6: $web3-page.net-title-6
+title-7: $web3-page.net-title-7
+content-1: $web3-page.net-content-1
+content-2: $web3-page.net-content-2
+content-3: $web3-page.net-content-3
+content-4: $web3-page.net-content-4
+content-5: $web3-page.net-content-5
+content-6: $web3-page.net-content-6
+content-7: $web3-page.net-content-7
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 40
+background.solid: #0d0d0d
+
+-- contact-1:
+contact-heading: $web3-page.contact-heading
+contact-text-1: $web3-page.contact-text-1
+contact-text-2: $web3-page.contact-text-2
+contact-text-3: $web3-page.contact-text-3
+contact-text-4: $web3-page.contact-text-4
+contact-text-5: $web3-page.contact-text-5
+contact-button-text: $web3-page.contact-button-text
 
 -- end: ftd.column
 

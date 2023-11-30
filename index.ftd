@@ -16,6 +16,43 @@ cta-button: **Join Us**
 button-link-1: https://trizui.trizwit.com/
 about-cover: $assets.files.assets.about.jpg
 about-heading: About Us
+part-heading: Previous Partners
+part-logo-1: $assets.files.assets.p-logo-1.jpg
+part-logo-2: $assets.files.assets.p-logo-2.jpg
+part-logo-3: $assets.files.assets.p-logo-3.jpg
+part-logo-4: $assets.files.assets.p-logo-4.jpg
+part-logo-5: $assets.files.assets.p-logo-5.jpg
+part-logo-6: $assets.files.assets.p-logo-6.jpg
+part-logo-7: $assets.files.assets.p-logo-7.jpg
+part-logo-8: $assets.files.assets.p-logo-8.jpg
+part-logo-9: $assets.files.assets.p-logo-9.jpg
+part-logo-10: $assets.files.assets.p-logo-10.jpg
+mentorship-caption: Mentorship Program
+mentorship-button: Join Mentorship
+mentorship-link: https://trizui.trizwit.com/
+mentorship-image: $assets.files.assets.hero-2.jpg
+net-heading: Networking
+net-title-1: Knowledge Sharing
+net-title-2: Partnerships and Collaborations
+net-title-3: Mentorship and Guidance
+net-title-4: Validation and Feedback
+net-title-5: Emotional Support
+net-title-6: Access to Opportunities
+net-title-7: Market Insights
+net-content-1: Networking facilitates the exchange of insights, knowledge, and experiences among founders, enabling them to make informed decisions and learn from each other.
+net-content-2: Founders can discover potential partners within their network, fostering collaborations that harness complementary strengths and resources.
+net-content-3: Networking connects founders with mentors and advisors who offer guidance and support, particularly beneficial for those starting out.
+net-content-4: Feedback from peers in the network helps founders refine their ideas, products, and strategies.
+net-content-5: Founders often face challenges and stress, and networking provides emotional support and a sense of community.
+net-content-6: Networking opens doors to funding sources, investors, customers, job candidates, and resources essential for growth.
+net-content-7: A network keeps founders updated on market trends, helping them remain competitive and innovative in their ventures.
+contact-heading: Join Us
+contact-text-1: Name
+contact-text-2: Email
+contact-text-3: Phone Number
+contact-text-4: City
+contact-text-5: Message
+contact-button-text: SUBMIT
 
 We empower Web3 founders to spread their wings and grow.
 We wholeheartedly embrace the vital role of community support in propelling our founders to new heights.

@@ -480,8 +480,11 @@ string cta-button:
 boolean $hero-hover: false
 body content:
 
-
 -- ftd.column:
+width: fill-container
+height: auto
+background.solid: #0d0d0d
+align-content: center
 
 -- ftd.row:
 if: { ftd.device == "desktop" }
@@ -602,24 +605,17 @@ height: auto
 
 
 
--- component partners:
+-- component partners-section:
 caption heading:
-ftd.image-src part-logo-1:
-ftd.image-src part-logo-2:
-ftd.image-src part-logo-3:
-ftd.image-src part-logo-4:
-ftd.image-src part-logo-5:
-ftd.image-src part-logo-6:
-ftd.image-src part-logo-7:
-ftd.image-src part-logo-8:
-ftd.image-src part-logo-9:
-ftd.image-src part-logo-10:
+children partner:
 
 -- ftd.column:
 width: fill-container
 spacing.fixed.vw: 4
+padding.vw: 4
+background.solid: #0d0d0d
 
--- ftd.text: $partners.heading
+-- ftd.text: $partners-section.heading
 role: $inherited.types.heading-large
 role if { ftd.device == "mobile" }: $inherited.types.heading-medium
 color: #b7ab98
@@ -629,79 +625,79 @@ margin-left.px if { ftd.device == "mobile" }: 8
 -- ftd.row:
 width: fill-container
 spacing.fixed.vw: 4
+children: $partners-section.partner
+wrap: true
 
--- ftd.image:
-src: $partners.part-logo-1
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
 
--- ftd.image:
-src: $partners.part-logo-2
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
-
--- ftd.image:
-src: $partners.part-logo-3
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
-
--- ftd.image:
-src: $partners.part-logo-4
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
-
--- ftd.image:
-src: $partners.part-logo-5
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
-
--- end: ftd.row
-
--- ftd.row:
-width: fill-container
-spacing.fixed.vw: 4
-
--- ftd.image:
-src: $partners.part-logo-6
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
-
--- ftd.image:
-src: $partners.part-logo-7
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
-
--- ftd.image:
-src: $partners.part-logo-8
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
-
--- ftd.image:
-src: $partners.part-logo-9
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
-
--- ftd.image:
-src: $partners.part-logo-10
-width.fixed.vw: 14
-height.fixed.vw: 14
-border-radius.percent: 50
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: partners
+-- end: partners-section
 
+
+
+
+
+
+
+
+
+
+-- component partner-comp:
+ftd.image-src logo:
+
+-- ftd.column:
+width.fixed.vw: 14
+height.fixed.vw: 14
+
+
+-- ftd.image:
+src: $partner-comp.logo
+width: fill-container
+height: fill-container
+border-radius.percent: 50
+fit: contain
+
+-- end: ftd.column
+
+
+-- end: partner-comp
+
+
+
+
+
+
+
+
+
+
+-- component network-comp:
+string title:
+string content:
+
+-- ftd.column:
+width.fixed.vw: 28
+height.fixed.vw: 12
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 1
+
+-- ftd.text: $network-comp.title
+role: $inherited.types.heading-small
+color: #b7ab98
+text-align: center
+
+-- ftd.text: $network-comp.content
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
+
+-- end: network-comp
 
 
 
@@ -1196,6 +1192,225 @@ $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-button, v = false)
 
 
 
+-- component online-events:
+children on-event: 
+string title: 
+
+-- ftd.column:
+width: fill-container
+background.solid: #0d0d0d
+spacing.fixed.vw: 2
+
+-- ftd.text: $online-events.title
+role: $inherited.types.heading-medium 
+color: #b7ab98
+margin-left.px: 80
+margin-left.px if {ftd.device == "mobile"}: 20
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.vw: 3
+align-content: center
+wrap: true
+children: $online-events.on-event
+
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: online-events
+
+
+
+
+
+
+
+
+
+
+-- component online-event-comp:
+ftd.image-src event:
+string event-link:
+
+-- ftd.column:
+width.fixed.vw: 24
+height.fixed.vw: 14
+
+-- ftd.image:
+width: fill-container
+height: fill-container
+fit: contain
+src: $online-event-comp.event
+link: $online-event-comp.event-link
+
+-- end: ftd.column
+
+-- end: online-event-comp
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+string caption-1:
+string caption-2:
+string caption-3:
+string caption-text-1:
+string caption-text-2:
+string caption-text-3:
+string caption-text-4:
+string caption-text-5:
+string copyright:
+ftd.image-src caption-logo-1:
+ftd.image-src caption-logo-2:
+ftd.image-src caption-logo-3:
+
+
+-- ftd.column:
+width: fill-container
+background.solid: #0d0d0d
+margin-top.vw: 2
+
+
+-- ftd.row:
+width: fill-container
+spacing if {ftd.device == "desktop"}: space-between
+spacing.fixed.vw if {ftd.device == "mobile"}: 8
+border-top-width.px: 2
+border-color: #b7ab98
+padding.vw: 4
+padding-left.px: 20
+wrap: true
+align-content: center
+
+
+-- ftd.column:
+width.fixed.vw: 30
+width.fixed.vw if {ftd.device == "mobile"}: 48
+spacing.fixed.vw: 2
+
+
+-- ftd.text: $footer.caption-1
+role: $inherited.types.heading-medium 
+role if {ftd.device == "mobile"}: $inherited.types.heading-small
+color: #fff;;#b7ab98
+
+-- ftd.text: $footer.caption-text-1
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+color: #b7ab98
+
+-- ftd.text: $footer.caption-text-2
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+color: #b7ab98
+
+-- ftd.text: $footer.caption-text-3
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+color: #b7ab98
+
+-- ftd.text: $footer.caption-text-4
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+color: #b7ab98
+
+-- ftd.text: $footer.caption-text-5
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+color: #b7ab98
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 30
+width.fixed.vw if {ftd.device == "mobile"}: 48
+spacing.fixed.vw: 2
+
+
+-- ftd.text: $footer.caption-2
+role: $inherited.types.heading-medium 
+role if {ftd.device == "mobile"}: $inherited.types.heading-small
+color: #fff;;#b7ab98
+
+-- ftd.row:
+spacing.fixed.vw: 2
+
+-- ftd.image:
+src: $footer.caption-logo-1
+width.fixed.vw: 3
+height.fixed.vw: 3
+width.fixed.vw if {ftd.device == "mobile"}: 8
+height.fixed.vw if {ftd.device == "mobile"}: 8
+
+-- ftd.image:
+src: $footer.caption-logo-2
+width.fixed.vw: 3
+height.fixed.vw: 3
+width.fixed.vw if {ftd.device == "mobile"}: 8
+height.fixed.vw if {ftd.device == "mobile"}: 8
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 30
+width.fixed.vw if {ftd.device == "mobile"}: 48
+spacing.fixed.vw: 2
+
+-- ftd.text: $footer.caption-3
+role: $inherited.types.heading-medium 
+role if {ftd.device == "mobile"}: $inherited.types.heading-small
+color: #fff;;#b7ab98
+
+-- ftd.image:
+src: $footer.caption-logo-3
+width.fixed.vw: 6
+height.fixed.vw: 6
+width.fixed.vw if {ftd.device == "mobile"}: 12
+height.fixed.vw if {ftd.device == "mobile"}: 12
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+border-top-width.px: 2
+border-color: #b7ab98
+align-content: center
+padding-top.vw if {ftd.device == "desktop"}: 1
+
+-- ftd.text: $footer.copyright
+role: $inherited.types.heading-tiny
+role if {ftd.device == "mobile"}: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+
+
+
+
 
 -- component web3-page:
 ftd.image-src logo:
@@ -1218,21 +1433,6 @@ ftd.image-src about-cover:
 string about-heading:
 body about:
 children event-child:
-string part-heading:
-ftd.image-src part-logo-1:
-ftd.image-src part-logo-2:
-ftd.image-src part-logo-3:
-ftd.image-src part-logo-4:
-ftd.image-src part-logo-5:
-ftd.image-src part-logo-6:
-ftd.image-src part-logo-7:
-ftd.image-src part-logo-8:
-ftd.image-src part-logo-9:
-ftd.image-src part-logo-10:
-string mentorship-caption:
-string mentorship-button:
-string mentorship-link:
-ftd.image-src mentorship-image:
 string net-heading:
 string net-title-1:
 string net-title-2:
@@ -1378,42 +1578,6 @@ children: $web3-page.event-child
 
 -- ftd.column:
 width: fill-container
-background.solid: #0d0d0d
-padding.vw: 4
-
--- partners:
-heading: $web3-page.part-heading
-part-logo-1: $web3-page.part-logo-1
-part-logo-2: $web3-page.part-logo-2
-part-logo-3: $web3-page.part-logo-3
-part-logo-4: $web3-page.part-logo-4
-part-logo-5: $web3-page.part-logo-5
-part-logo-6: $web3-page.part-logo-6
-part-logo-7: $web3-page.part-logo-7
-part-logo-8: $web3-page.part-logo-8
-part-logo-9: $web3-page.part-logo-9
-part-logo-10: $web3-page.part-logo-10
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-height: auto
-background.solid: #0d0d0d
-align-content: center
-
--- hero-2: $web3-page.mentorship-caption
-cover: $web3-page.mentorship-image
-cta-button: $web3-page.mentorship-button
-button-link: $web3-page.mentorship-link
-
-We recognize that in the Web3 journey, the right mentor at the right time can make all the difference. Join us on this 
-transformative journey with a mentor who understands your unique path and aspirations, pushing your goals to the next level.
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
 height: auto
 background.solid: #0d0d0d
 align-content: center
@@ -1452,6 +1616,20 @@ contact-text-5: $web3-page.contact-text-5
 contact-button-text: $web3-page.contact-button-text
 
 -- end: ftd.column
+
+-- footer:
+caption-1: Community
+caption-2: Follow Us
+caption-3: Contact Us
+caption-text-1: About Us
+caption-text-2: Events
+caption-text-3: Mentorship Program
+caption-text-4: Networking
+caption-text-5: Contact Us
+caption-logo-1: $assets.files.assets.c-logo-1.png
+caption-logo-2: $assets.files.assets.c-logo-2.png
+caption-logo-3: $assets.files.assets.c-logo-3.jpg
+copyright: web3innovatorsnexus © Copyright 2023. All Rights Reserved.
 
 -- end: ftd.column
 

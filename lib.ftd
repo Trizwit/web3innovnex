@@ -1272,6 +1272,18 @@ string sub-title:
 string cta-button:
 string button-link-1:
 boolean $is-active-1: false
+string foot-caption-1: 
+string foot-caption-2:
+string foot-caption-3:
+string foot-text-1:
+string foot-text-2:
+string foot-text-3:
+string foot-text-4:
+string foot-text-5:
+ftd.image-src foot-logo-1:
+ftd.image-src foot-logo-2:
+ftd.image-src foot-logo-3:
+string foot-copyright:
 children child:
 
 
@@ -1389,18 +1401,18 @@ children: $web3-page.child
 
 
 -- footer:
-caption-1: Community
-caption-2: Follow Us
-caption-3: Contact Us
-caption-text-1: About Us
-caption-text-2: Events
-caption-text-3: Mentorship Program
-caption-text-4: Networking
-caption-text-5: Contact Us
-caption-logo-1: $assets.files.assets.c-logo-1.png
-caption-logo-2: $assets.files.assets.c-logo-2.png
-caption-logo-3: $assets.files.assets.c-logo-3.jpg
-copyright: web3innovatorsnexus © Copyright 2023. All Rights Reserved.
+caption-1: $web3-page.foot-caption-1
+caption-2: $web3-page.foot-caption-2
+caption-3: $web3-page.foot-caption-3
+caption-text-1: $web3-page.foot-text-1
+caption-text-2: $web3-page.foot-text-2
+caption-text-3: $web3-page.foot-text-3
+caption-text-4: $web3-page.foot-text-4
+caption-text-5: $web3-page.foot-text-5
+caption-logo-1: $web3-page.foot-logo-1
+caption-logo-2: $web3-page.foot-logo-2
+caption-logo-3: $web3-page.foot-logo-3
+copyright: $web3-page.foot-copyright
 
 -- end: ftd.column
 

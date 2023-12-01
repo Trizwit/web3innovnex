@@ -1040,7 +1040,7 @@ color: #b7ab98
 -- ftd.row:
 width: fill-container
 spacing.fixed.vw: 3
-spacing.fixed.vw if {ftd.device == "mobile"}: 6
+spacing.fixed.vw if {ftd.device == "mobile"}: 12
 wrap: true
 children: $online-events.on-event
 

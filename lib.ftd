@@ -275,7 +275,7 @@ body content:
 if: { ftd.device == "desktop" }
 width: fill-container
 height: hug-content
-align-content: center
+;;align-content: center
 padding-vertical.px if { ftd.device == "desktop" }: 80
 background.solid: #0d0d0d
 
@@ -284,6 +284,7 @@ background.solid: #0d0d0d
 width.fixed.percent: 45
 height: auto
 align-content: center
+
 
 -- ftd.image:
 src: $hero-1.cover   
@@ -297,7 +298,9 @@ height: auto
 width.fixed.percent: 40
 align-content: left
 align-self: center
-margin-left.px: 60
+margin-left.px: 100
+
+
 
 -- ftd.text: $hero-1.headline
 margin-bottom.px: 16
@@ -383,7 +386,7 @@ spacing: space-between
 background.solid: #0d0d0d
 border-bottom-width.px: 2
 border-color: grey
-padding.vw: 2
+padding-vertical.vw: 2
 background.solid if {event.hover}: #eb5939
 $on-mouse-enter$: $ftd.set-bool($a = $event.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $event.hover, v = false)
@@ -450,7 +453,6 @@ spacing.fixed.vw: 2
 role: $inherited.types.heading-large
 role if { ftd.device == "mobile" }: $inherited.types.heading-medium
 color: #b7ab98
-margin-left.px: 20
 margin-left.px if { ftd.device == "mobile" }: 4
 
 -- ftd.column:
@@ -486,11 +488,12 @@ height: auto
 background.solid: #0d0d0d
 align-content: center
 
+
 -- ftd.row:
 if: { ftd.device == "desktop" }
 width: fill-container
 height: hug-content
-align-content: center
+;;align-content: center
 padding-vertical.px if { ftd.device == "desktop" }: 96
 background.solid: #0d0d0d
 
@@ -498,7 +501,8 @@ background.solid: #0d0d0d
 width.fixed.percent: 40
 align-content: left
 align-self: center
-margin-right.px: 60
+margin-right.px: 100
+
 
 -- ftd.text: $hero-2.headline
 margin-bottom.px: 16
@@ -530,6 +534,7 @@ link: $hero-2.button-link
 width.fixed.percent: 45
 height: auto
 align-content: center
+border-color: red
 
 -- ftd.image:
 src: $hero-2.cover   
@@ -612,14 +617,14 @@ children partner:
 -- ftd.column:
 width: fill-container
 spacing.fixed.vw: 4
-padding.vw: 4
+padding-vertical.vw: 4
 background.solid: #0d0d0d
+
 
 -- ftd.text: $partners-section.heading
 role: $inherited.types.heading-large
 role if { ftd.device == "mobile" }: $inherited.types.heading-medium
 color: #b7ab98
-margin-left.px: 20
 margin-left.px if { ftd.device == "mobile" }: 8
 
 -- ftd.row:
@@ -688,7 +693,7 @@ padding.vw: 1
 -- ftd.text: $network-comp.title
 role: $inherited.types.heading-small
 color: #b7ab98
-text-align: center
+text-align: justify
 
 -- ftd.text: $network-comp.content
 role: $inherited.types.heading-tiny
@@ -714,16 +719,17 @@ children network-child:
 -- ftd.column:
 width: fill-container
 
+
 -- ftd.column:
 if: { ftd.device == "desktop" }
 width: fill-container
 spacing.fixed.vw: 2
-align-content: center
+;;align-content: center
 
 -- ftd.text: $network.heading
 role: $inherited.types.heading-medium
 color: #b7ab98
-;;margin-left.vw: 6
+
 
 -- ftd.row:
 width: fill-container
@@ -792,10 +798,11 @@ boolean $hover-button: false
 -- ftd.column:
 width: fill-container
 height: fill-container
-padding-horizontal.percent: 8
+padding-vertical.percent: 8
 background.solid: #0d0d0d
 spacing: space-evenly
 id: contact-1
+
 
 
 
@@ -926,16 +933,15 @@ width: fill-container
 background.solid: #0d0d0d
 spacing.fixed.vw: 2
 
+
 -- ftd.text: $online-events.title
 role: $inherited.types.heading-medium 
 color: #b7ab98
-margin-left.px: 80
 margin-left.px if {ftd.device == "mobile"}: 20
 
 -- ftd.row:
 width: fill-container
 spacing.fixed.vw: 3
-align-content: center
 wrap: true
 children: $online-events.on-event
 
@@ -962,6 +968,7 @@ string event-link:
 -- ftd.column:
 width.fixed.vw: 24
 height.fixed.vw: 14
+
 
 -- ftd.image:
 width: fill-container
@@ -1154,13 +1161,14 @@ string sub-title:
 string cta-button:
 string button-link-1:
 boolean $is-active-1: false
-children event-child:
+children child:
 
 
 -- ftd.column:
 width: fill-container
 height: fill-container
 background.solid: #0d0d0d
+
 
 -- ftd.row: 
 width: fill-container
@@ -1257,21 +1265,13 @@ link: $web3-page.button-link-1
 -- ftd.column:
 width: fill-container
 background.solid: #0d0d0d
-padding.vw: 2
-children: $web3-page.event-child
+padding.vw: 4
+children: $web3-page.child
 
 
 -- end: ftd.column
 
 
--- ftd.column:
-width: fill-container
-margin-top.px: 40
-background.solid: #0d0d0d
-
-
-
--- end: ftd.column
 
 -- footer:
 caption-1: Community

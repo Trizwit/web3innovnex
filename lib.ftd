@@ -86,6 +86,11 @@ string cta-link-2:
 string cta-link-3:
 string cta-link-4:
 string cta-link-5:
+boolean $hover-text-1: false
+boolean $hover-text-2: false
+boolean $hover-text-3: false
+boolean $hover-text-4: false
+boolean $hover-text-5: false
 
 -- ftd.row:
 width: fill-container
@@ -115,26 +120,41 @@ padding-top.px: 36
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-1
+color if {desk-navbar.hover-text-1}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $desk-navbar.hover-text-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $desk-navbar.hover-text-1, v = false)
 
 -- ftd.text: $desk-navbar.cta-text-2
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-2
+color if {desk-navbar.hover-text-2}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $desk-navbar.hover-text-2, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $desk-navbar.hover-text-2, v = false)
 
 -- ftd.text: $desk-navbar.cta-text-3
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-3
+color if {desk-navbar.hover-text-3}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $desk-navbar.hover-text-3, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $desk-navbar.hover-text-3, v = false)
 
 -- ftd.text: $desk-navbar.cta-text-4
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-4
+color if {desk-navbar.hover-text-4}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $desk-navbar.hover-text-4, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $desk-navbar.hover-text-4, v = false)
 
 -- ftd.text: $desk-navbar.cta-text-5
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $desk-navbar.cta-link-5
+color if {desk-navbar.hover-text-5}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $desk-navbar.hover-text-5, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $desk-navbar.hover-text-5, v = false)
 
 -- end: ftd.row
 
@@ -200,6 +220,11 @@ string cta-link-2:
 string cta-link-3:
 string cta-link-4:
 string cta-link-5:
+boolean $hover-text-1: false
+boolean $hover-text-2: false
+boolean $hover-text-3: false
+boolean $hover-text-4: false
+boolean $hover-text-5: false
 
 -- ftd.row:
 if: {menu-open}
@@ -219,26 +244,41 @@ padding-top.px: 36
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $drop-navbar.cta-link-1
+color if {drop-navbar.hover-text-1}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-1, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-1, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-2
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $drop-navbar.cta-link-2
+color if {drop-navbar.hover-text-2}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-2, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-2, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-3
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $drop-navbar.cta-link-3
+color if {drop-navbar.hover-text-3}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-3, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-3, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-4
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $drop-navbar.cta-link-4
+color if {drop-navbar.hover-text-4}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-4, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-4, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-5
 role: $inherited.types.heading-tiny
 color: #b7ab98
 link: $drop-navbar.cta-link-5
+color if {drop-navbar.hover-text-5}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-5, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-5, v = false)
 
 -- end: ftd.column
 
@@ -1000,6 +1040,7 @@ color: #b7ab98
 -- ftd.row:
 width: fill-container
 spacing.fixed.vw: 3
+spacing.fixed.vw if {ftd.device == "mobile"}: 6
 wrap: true
 children: $online-events.on-event
 
@@ -1026,12 +1067,14 @@ string event-link:
 -- ftd.column:
 width.fixed.vw: 24
 height.fixed.vw: 14
+width.fixed.vw if {ftd.device == "mobile"}: 80
+height.fixed.vw if {ftd.device == "mobile"}: 40
 
 
 -- ftd.image:
 width: fill-container
 height: fill-container
-fit: contain
+fit if {ftd.device == "desktop"}: contain
 src: $online-event-comp.event
 link: $online-event-comp.event-link
 

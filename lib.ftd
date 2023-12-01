@@ -326,7 +326,7 @@ if: { ftd.device == "mobile" }
 width: fill-container
 height: hug-content
 align-content: center
-padding-horizontal.px: 15
+padding-horizontal.px: 10
 padding-vertical.px: 20
 background.solid: #0d0d0d
 
@@ -335,11 +335,11 @@ src: $hero-1.cover
 width.fixed.percent: 100
 height: auto 
 
+
 -- ftd.column:
 width: fill-container
 align-content: left
 align-self: center
-margin-left.px: 10
 margin-top.px: 20
 
 -- ftd.text: $hero-1.headline
@@ -446,6 +446,10 @@ children child:
 
 -- ftd.column:
 width: fill-container
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
 spacing.fixed.vw: 2
 
 
@@ -453,11 +457,34 @@ spacing.fixed.vw: 2
 role: $inherited.types.heading-large
 role if { ftd.device == "mobile" }: $inherited.types.heading-medium
 color: #b7ab98
-margin-left.px if { ftd.device == "mobile" }: 4
+
 
 -- ftd.column:
 width: fill-container
 children: $events.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+spacing.fixed.vw: 2
+margin-left.px: 10
+
+
+-- ftd.text: $events.title
+role: $inherited.types.heading-large
+role if { ftd.device == "mobile" }: $inherited.types.heading-medium
+color: #b7ab98
+
+
+-- ftd.column:
+width: fill-container
+children: $events.child
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -552,7 +579,7 @@ if: { ftd.device == "mobile" }
 width: fill-container
 height: hug-content
 align-content: center
-padding-horizontal.px: 15
+padding-horizontal.px: 10
 padding-vertical.px: 20
 background.solid: #0d0d0d
 spacing.fixed.vw: 12
@@ -561,7 +588,6 @@ spacing.fixed.vw: 12
 width: fill-container
 align-content: left
 align-self: center
-margin-left.px: 10
 margin-top.px: 20
 
 -- ftd.text: $hero-2.headline
@@ -619,17 +645,19 @@ width: fill-container
 spacing.fixed.vw: 4
 padding-vertical.vw: 4
 background.solid: #0d0d0d
+margin-left.px if { ftd.device == "mobile" }: 10
 
 
 -- ftd.text: $partners-section.heading
 role: $inherited.types.heading-large
 role if { ftd.device == "mobile" }: $inherited.types.heading-medium
 color: #b7ab98
-margin-left.px if { ftd.device == "mobile" }: 8
+
 
 -- ftd.row:
 width: fill-container
 spacing.fixed.vw: 4
+spacing.fixed.vw if { ftd.device == "mobile" }: 16
 children: $partners-section.partner
 wrap: true
 
@@ -656,6 +684,8 @@ ftd.image-src logo:
 -- ftd.column:
 width.fixed.vw: 14
 height.fixed.vw: 14
+width.fixed.vw if { ftd.device == "mobile" }: 32
+height.fixed.vw if { ftd.device == "mobile" }: 32
 
 
 -- ftd.image:
@@ -684,11 +714,15 @@ string title:
 body content:
 
 -- ftd.column:
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
 width.fixed.vw: 28
 height.fixed.vw: 12
 align-content: center
 spacing.fixed.vw: 1
 padding.vw: 1
+
 
 -- ftd.text: $network-comp.title
 role: $inherited.types.heading-small
@@ -699,6 +733,29 @@ text-align: justify
 role: $inherited.types.heading-tiny
 color: #b7ab98
 text-align: center
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width.fixed.vw: 96
+height.fixed.vw: 28
+align-content: center
+spacing.fixed.vw: 1
+padding.vw: 2
+
+
+-- ftd.text: $network-comp.title
+role: $inherited.types.heading-tiny
+color: #b7ab98
+text-align: justify
+
+-- ftd.text: $network-comp.content
+role: $inherited.types.fine-print
+color: #b7ab98
+text-align: center
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -724,7 +781,7 @@ width: fill-container
 if: { ftd.device == "desktop" }
 width: fill-container
 spacing.fixed.vw: 2
-;;align-content: center
+align-content: center
 
 -- ftd.text: $network.heading
 role: $inherited.types.heading-medium
@@ -756,6 +813,7 @@ color: #b7ab98
 -- ftd.column:
 width: fill-container
 align-content: center
+spacing.fixed.vw: 4
 children: $network.network-child
 
 
@@ -932,12 +990,12 @@ string title:
 width: fill-container
 background.solid: #0d0d0d
 spacing.fixed.vw: 2
-
+margin-left.px if {ftd.device == "mobile"}: 10
 
 -- ftd.text: $online-events.title
 role: $inherited.types.heading-medium 
 color: #b7ab98
-margin-left.px if {ftd.device == "mobile"}: 20
+
 
 -- ftd.row:
 width: fill-container
@@ -1009,6 +1067,7 @@ ftd.image-src caption-logo-3:
 width: fill-container
 background.solid: #0d0d0d
 padding.vw: 4
+padding.vw if {ftd.device == "mobile"}: 6
 
 
 -- ftd.row:
@@ -1030,32 +1089,32 @@ spacing.fixed.vw: 2
 
 -- ftd.text: $footer.caption-1
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
 color: #b7ab98
 
 -- ftd.text: $footer.caption-text-1
 role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+role if {ftd.device == "mobile"}: $inherited.types.fine-print
 color: #b7ab98
 
 -- ftd.text: $footer.caption-text-2
 role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+role if {ftd.device == "mobile"}: $inherited.types.fine-print
 color: #b7ab98
 
 -- ftd.text: $footer.caption-text-3
 role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+role if {ftd.device == "mobile"}: $inherited.types.fine-print
 color: #b7ab98
 
 -- ftd.text: $footer.caption-text-4
 role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+role if {ftd.device == "mobile"}: $inherited.types.fine-print
 color: #b7ab98
 
 -- ftd.text: $footer.caption-text-5
 role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
+role if {ftd.device == "mobile"}: $inherited.types.fine-print
 color: #b7ab98
 
 -- end: ftd.column
@@ -1068,7 +1127,7 @@ spacing.fixed.vw: 2
 
 -- ftd.text: $footer.caption-2
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
 color: #b7ab98
 
 -- ftd.row:
@@ -1099,7 +1158,7 @@ spacing.fixed.vw: 2
 
 -- ftd.text: $footer.caption-3
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
 color: #b7ab98
 
 -- ftd.image:
@@ -1108,6 +1167,8 @@ width.fixed.vw: 6
 height.fixed.vw: 6
 width.fixed.vw if {ftd.device == "mobile"}: 12
 height.fixed.vw if {ftd.device == "mobile"}: 12
+margin-left.px if {ftd.device == "desktop"}: 8
+margin-left.px if {ftd.device == "mobile"}: 4
 
 -- end: ftd.column
 
@@ -1125,6 +1186,7 @@ role: $inherited.types.heading-tiny
 role if {ftd.device == "mobile"}: $inherited.types.fine-print
 color: #b7ab98
 text-align: center
+margin-top.px if {ftd.device == "mobile"}: 8
 
 -- end: ftd.row
 
@@ -1231,7 +1293,7 @@ if: { ftd.device == "mobile" }
 width: fill-container
 spacing.fixed.vw: 4
 background.solid: #0d0d0d
-padding.vw: 4
+padding.vw: 8
 
 -- ftd.text: $web3-page.title
 role: $inherited.types.heading-large

@@ -1008,7 +1008,6 @@ ftd.image-src caption-logo-3:
 -- ftd.column:
 width: fill-container
 background.solid: #0d0d0d
-margin-top.vw: 2
 padding.vw: 4
 
 
@@ -1018,8 +1017,7 @@ spacing if {ftd.device == "desktop"}: space-between
 spacing.fixed.vw if {ftd.device == "mobile"}: 8
 border-top-width.px: 2
 border-color: #b7ab98
-padding.vw: 4
-padding-left.px: 20
+padding-vertical.vw: 4
 wrap: true
 
 

@@ -314,6 +314,7 @@ body content:
 
 -- ftd.column:
 padding-vertical.vw: 3
+id: hero-1
 
 -- ftd.row:
 if: { ftd.device == "desktop" }
@@ -425,6 +426,10 @@ boolean $hover: false
 
 -- ftd.row:
 width: fill-container
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
+width: fill-container
 height.fixed.vw if {event.hover}: 8
 spacing: space-between
 align-content: center
@@ -442,14 +447,12 @@ $on-mouse-leave$: $ftd.set-bool($a = $event.hover, v = false)
 color: #b7ab98
 color if {event.hover}: #000
 role: $inherited.types.heading-tiny
-role if { ftd.device == "mobile" }: $inherited.types.fine-print
 text-align: center
 
 -- ftd.text: $event.place
 color: #b7ab98
 color if {event.hover}: #000
 role: $inherited.types.heading-tiny
-role if { ftd.device == "mobile" }: $inherited.types.fine-print
 text-align: center
 
 -- ftd.column:
@@ -460,17 +463,65 @@ align-content: center
 color: #b7ab98
 color if {event.hover}: #000
 role: $inherited.types.heading-small
-role if { ftd.device == "mobile" }: $inherited.types.copy-small
 text-align: center
 
 -- ftd.text: $event.location
 color: #b7ab98
 color if {event.hover}: #000
 role: $inherited.types.heading-small
-role if { ftd.device == "mobile" }: $inherited.types.copy-small
 text-align: center
 
 -- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { ftd.device == "mobile" }
+width: fill-container
+height.fixed.vw if {event.hover}: 8
+spacing: space-between
+align-content: center
+background.solid: #0d0d0d
+border-bottom-width.px: 2
+border-color: grey
+padding-vertical.vw: 1.5
+padding-horizontal.vw: 1
+background.solid if {event.hover}: #eb5939
+$on-mouse-enter$: $ftd.set-bool($a = $event.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $event.hover, v = false)
+
+
+-- ftd.text: $event.date
+color: #b7ab98
+color if {event.hover}: #000
+role: $inherited.types.fine-print
+text-align: center
+
+-- ftd.text: $event.place
+color: #b7ab98
+color if {event.hover}: #000
+role: $inherited.types.fine-print
+text-align: center
+
+-- ftd.column:
+width.fixed.vw: 36
+align-content: center
+
+-- ftd.text: $event.time
+color: #b7ab98
+color if {event.hover}: #000
+role: $inherited.types.copy-small
+text-align: center
+
+-- ftd.text: $event.location
+color: #b7ab98
+color if {event.hover}: #000
+role: $inherited.types.copy-small
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -491,6 +542,7 @@ children child:
 
 -- ftd.column:
 width: fill-container
+id: events
 
 -- ftd.column:
 if: { ftd.device == "desktop" }
@@ -521,8 +573,7 @@ margin-left.px: 10
 
 -- ftd.text: $events.title
 role: $inherited.types.heading-large
-role if { ftd.device == "mobile" }: $inherited.types.heading-medium
-color: #b7ab98
+color: #eb5939
 
 
 -- ftd.column:
@@ -555,6 +606,7 @@ boolean $hero-hover: false
 body content:
 
 -- ftd.column:
+id: hero-2
 width: fill-container
 height: auto
 background.solid: #0d0d0d
@@ -578,12 +630,12 @@ margin-right.px: 100
 
 -- ftd.text: $hero-2.headline
 margin-bottom.px: 16
-role: $inherited.types.heading-medium
-color: #b7ab98
+role: $inherited.types.heading-large
+color: #eb5939
 
 -- ftd.text: $hero-2.content
 margin-bottom.px: 32
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 color: #b7ab98
 
 -- ftd.text: $hero-2.cta-button
@@ -627,21 +679,25 @@ align-content: center
 padding-horizontal.px: 10
 padding-vertical.px: 20
 background.solid: #0d0d0d
-spacing.fixed.vw: 12
+
 
 -- ftd.column:
 width: fill-container
 align-content: left
 align-self: center
 margin-top.px: 20
+spacing.fixed.vw: 8
 
 -- ftd.text: $hero-2.headline
-margin-bottom.px: 16
-role: $inherited.types.heading-medium
-color: #b7ab98
+role: $inherited.types.heading-large
+color: #eb5939
+
+-- ftd.image:
+src: $hero-2.cover   
+width.fixed.percent: 100
+height: auto 
 
 -- ftd.text: $hero-2.content
-margin-bottom.px: 32
 role: $inherited.types.heading-tiny
 color: #b7ab98
 
@@ -660,10 +716,6 @@ link: $hero-2.button-link
 
 -- end: ftd.column
 
--- ftd.image:
-src: $hero-2.cover   
-width.fixed.percent: 100
-height: auto 
 
 -- end: ftd.column
 
@@ -695,7 +747,7 @@ margin-left.px if { ftd.device == "mobile" }: 10
 
 -- ftd.text: $partners-section.heading
 role: $inherited.types.heading-large
-role if { ftd.device == "mobile" }: $inherited.types.heading-medium
+role if { ftd.device == "mobile" }: $inherited.types.heading-large
 color: #eb5939
 
 
@@ -763,17 +815,17 @@ body content:
 
 -- ftd.column:
 if: { ftd.device == "desktop" }
-width.fixed.vw: 28
-height.fixed.vw: 12
+width.fixed.vw: 24
+height.fixed.vw: 14
 align-content: center
 spacing.fixed.vw: 1
-padding.vw: 1
+
 
 
 -- ftd.text: $network-comp.title
 role: $inherited.types.heading-small
 color: #b7ab98
-text-align: justify
+text-align: center
 
 -- ftd.text: $network-comp.content
 role: $inherited.types.heading-tiny
@@ -784,20 +836,21 @@ text-align: center
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
-width.fixed.vw: 96
-height.fixed.vw: 28
+;;width.fixed.vw: 96
+width: hug-content
+height: hug-content
 align-content: center
-spacing.fixed.vw: 1
-padding.vw: 2
+spacing.fixed.vw: 8
+margin-horizontal.vw: 4
 
 
 -- ftd.text: $network-comp.title
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 color: #b7ab98
-text-align: justify
+text-align: center
 
 -- ftd.text: $network-comp.content
-role: $inherited.types.fine-print
+role: $inherited.types.copy-large
 color: #b7ab98
 text-align: center
 
@@ -821,6 +874,8 @@ children network-child:
 
 -- ftd.column:
 width: fill-container
+id: network
+
 
 
 -- ftd.column:
@@ -829,15 +884,17 @@ width: fill-container
 spacing.fixed.vw: 2
 align-content: center
 
+
 -- ftd.text: $network.heading
-role: $inherited.types.heading-medium
-color: #b7ab98
+role: $inherited.types.heading-large
+color: #eb5939
 
 
 -- ftd.row:
 width: fill-container
 align-content: center
-spacing.fixed.vw: 1
+spacing: space-between
+;;spacing.fixed.vw: 5
 wrap: true
 children: $network.network-child
 
@@ -853,8 +910,8 @@ spacing.fixed.vw: 4
 align-content: center
 
 -- ftd.text: $network.heading
-role: $inherited.types.heading-medium
-color: #b7ab98
+role: $inherited.types.heading-large
+color: #eb5939
 
 -- ftd.column:
 width: fill-container
@@ -905,7 +962,7 @@ height: fill-container
 padding-vertical.percent: 8
 background.solid: #0d0d0d
 spacing: space-evenly
-id: contact-1
+id: contact
 
 
 
@@ -917,8 +974,8 @@ spacing.fixed.px: 20
 align-content if {ftd.device == "mobile"}: center
 
 -- ftd.text: $contact-1.contact-heading
-role: $inherited.types.heading-medium
-color: #b7ab98
+role: $inherited.types.heading-large
+color: #eb5939
 margin-top.px if {ftd.device == "mobile"}: 50
 
 -- ftd.text-input:
@@ -930,7 +987,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-1}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-1, v = false)
@@ -945,7 +1002,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-2}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-2, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-2, v = false)
@@ -960,7 +1017,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-3}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-3, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-3, v = false)
@@ -975,7 +1032,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-4}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-4, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-4, v = false)
@@ -997,7 +1054,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-5}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-5, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-5, v = false)
@@ -1359,12 +1416,14 @@ width: fill-container
 spacing.fixed.vw: 4
 background.solid: #0d0d0d
 padding.vw: 8
+margin-top.vw: 6
+
 
 -- ftd.text: $web3-page.title
 role: $inherited.types.heading-large
 color: #b7ab98
 padding-right.vw: 10
-padding-top.vw: 2
+
 
 -- ftd.text: $web3-page.sub-title
 role: $inherited.types.heading-small

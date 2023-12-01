@@ -5,11 +5,11 @@ cta-text-2: Events
 cta-text-3: Mentorship Program
 cta-text-4: Networking
 cta-text-5: Contact Us
-cta-link-1: https://trizui.trizwit.com/
-cta-link-2: https://trizui.trizwit.com/
-cta-link-3: https://trizui.trizwit.com/
-cta-link-4: https://trizui.trizwit.com/
-cta-link-5: https://trizui.trizwit.com/
+cta-link-1: index.html#hero-1
+cta-link-2: index.html#events
+cta-link-3: index.html#hero-2
+cta-link-4: index.html#network
+cta-link-5: index.html#contact
 title: **Welcome To Web3 Innovators Nexus Journey**
 sub-title: Build and Grow together
 cta-button: **Join Us**

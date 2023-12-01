@@ -1009,6 +1009,7 @@ ftd.image-src caption-logo-3:
 width: fill-container
 background.solid: #0d0d0d
 margin-top.vw: 2
+padding.vw: 4
 
 
 -- ftd.row:

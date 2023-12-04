@@ -1248,7 +1248,7 @@ height.fixed.vw if {ftd.device == "mobile"}: 16
 
 -- ftd.text: $footer.caption-1
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-large
 color: #eb5939
 margin-top.px if {ftd.device == "mobile"}: 10
 
@@ -1269,7 +1269,7 @@ spacing.fixed.vw: 2
 
 -- ftd.text: $footer.caption-2
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-medium
 color: #eb5939
 
 -- ftd.image:
@@ -1292,7 +1292,7 @@ spacing.fixed.vw: 2
 
 -- ftd.text: $footer.caption-3
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.heading-medium
 color: #eb5939
 
 -- ftd.text: $footer.caption-text-1

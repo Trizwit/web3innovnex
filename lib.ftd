@@ -443,17 +443,29 @@ $on-mouse-enter$: $ftd.set-bool($a = $event.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $event.hover, v = false)
 
 
+-- ftd.column:
+width.fixed.vw: 16
+align-content: center
+
 -- ftd.text: $event.date
 color: #b7ab98
 color if {event.hover}: #000
 role: $inherited.types.heading-tiny
 text-align: center
 
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 16
+align-content: center
+
 -- ftd.text: $event.place
 color: #b7ab98
 color if {event.hover}: #000
 role: $inherited.types.heading-tiny
 text-align: center
+
+-- end: ftd.column
 
 -- ftd.column:
 width.fixed.vw: 36
@@ -491,17 +503,31 @@ $on-mouse-enter$: $ftd.set-bool($a = $event.hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $event.hover, v = false)
 
 
+-- ftd.column:
+width.fixed.vw: 16
+align-content: center
+
+
 -- ftd.text: $event.date
 color: #b7ab98
 color if {event.hover}: #000
 role: $inherited.types.fine-print
 text-align: center
 
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 24
+align-content: center
+
+
 -- ftd.text: $event.place
 color: #b7ab98
 color if {event.hover}: #000
 role: $inherited.types.fine-print
 text-align: center
+
+-- end: ftd.column
 
 -- ftd.column:
 width.fixed.vw: 36
@@ -839,20 +865,20 @@ if: { ftd.device == "mobile" }
 ;;width.fixed.vw: 96
 width: hug-content
 height: hug-content
-align-content: center
-spacing.fixed.vw: 8
+;;align-content: center
+spacing.fixed.vw: 6
 margin-horizontal.vw: 4
 
 
 -- ftd.text: $network-comp.title
 role: $inherited.types.heading-small
 color: #b7ab98
-text-align: center
+;;text-align: center
 
 -- ftd.text: $network-comp.content
 role: $inherited.types.copy-large
 color: #b7ab98
-text-align: center
+;;text-align: center
 
 -- end: ftd.column
 
@@ -907,16 +933,17 @@ children: $network.network-child
 if: { ftd.device == "mobile" }
 width: fill-container
 spacing.fixed.vw: 4
-align-content: center
+;;align-content: center
 
 -- ftd.text: $network.heading
 role: $inherited.types.heading-large
 color: #eb5939
+margin-left.px: 10
 
 -- ftd.column:
 width: fill-container
 align-content: center
-spacing.fixed.vw: 4
+spacing.fixed.vw: 8
 children: $network.network-child
 
 
@@ -977,6 +1004,8 @@ align-content if {ftd.device == "mobile"}: center
 role: $inherited.types.heading-large
 color: #eb5939
 margin-top.px if {ftd.device == "mobile"}: 50
+margin-left.px if {ftd.device == "mobile"}: 10
+align-self if {ftd.device == "mobile"}: start
 
 -- ftd.text-input:
 placeholder: $contact-1.contact-text-1

@@ -155,7 +155,7 @@ event-link: https://www.linkedin.com/events/7125004913645916160/about/?invite=fa
 -- lib.hero-2: Mentorship Program
 cover: $assets.files.assets.hero-2.jpg
 cta-button: Join Mentorship
-button-link: https://trizui.trizwit.com/
+button-link: index.html#contact
 
 We recognize that in the Web3 journey, the right mentor at the right time can make all the difference. Join us on this 
 transformative journey with a mentor who understands your unique path and aspirations, pushing your goals to the next level.

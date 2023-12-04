@@ -13,7 +13,7 @@ cta-link-5: index.html#contact
 title: **Welcome To Web3 Innovators Nexus Journey**
 sub-title: Build and Grow together
 cta-button: **Join Us**
-button-link-1: https://www.linkedin.com/ 
+button-link-1: https://www.linkedin.com/groups/14303410/ 
 
 
 -- lib.hero-1: 
@@ -140,15 +140,15 @@ title: Online Events
 
 -- lib.online-event-comp:
 event: $assets.files.assets.online-event.jpg
-event-link: https://www.linkedin.com/
+event-link: https://www.linkedin.com/events/7125004913645916160/about/?invite=false&message=false&sAtp=&sTrk=&sV=&showRequesters=false&showShareByPost=false
 
 -- lib.online-event-comp:
 event: $assets.files.assets.online-event.jpg
-event-link: https://www.linkedin.com/
+event-link: https://www.linkedin.com/events/7125004913645916160/about/?invite=false&message=false&sAtp=&sTrk=&sV=&showRequesters=false&showShareByPost=false
 
 -- lib.online-event-comp:
 event: $assets.files.assets.online-event.jpg
-event-link: https://www.linkedin.com/
+event-link: https://www.linkedin.com/events/7125004913645916160/about/?invite=false&message=false&sAtp=&sTrk=&sV=&showRequesters=false&showShareByPost=false
 
 -- end: lib.online-events
 
@@ -230,9 +230,9 @@ text-link-5: index.html#contact
 social-logo-1: $assets.files.assets.c-logo-1.png
 social-logo-2: $assets.files.assets.c-logo-2.png
 contact-logo: $assets.files.assets.contact-logo.jpg
-social-link-1: https://twitter.com/
-social-link-2: linkedin.com
-contact-link: https://trizui.trizwit.com/ 
+social-link-1: https://twitter.com/i/flow/login?redirect_after_login=%2FWeb3_Innovator
+social-link-2: https://www.linkedin.com/groups/14303410/
+contact-link: https://calendly.com/wallethunter/15min?month=2023-12 
 copyright: web3innovatorsnexus © Copyright 2023  All Rights Reserved.
 about: An online-based solution combining AI's potential with the simplicity of a subscription-based software method.
 

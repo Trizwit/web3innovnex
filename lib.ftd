@@ -1193,16 +1193,26 @@ string caption-text-2:
 string caption-text-3:
 string caption-text-4:
 string caption-text-5:
+string text-link-1:
+string text-link-2:
+string text-link-3:
+string text-link-4:
+string text-link-5:
 string copyright:
-ftd.image-src caption-logo-1:
-ftd.image-src caption-logo-2:
-ftd.image-src caption-logo-3:
+string about:
+;;ftd.image-src company-logo:
+ftd.image-src contact-logo:
+string contact-link:
+ftd.image-src social-logo-1:
+ftd.image-src social-logo-2:
+string social-link-1:
+string social-link-2:
+
 
 
 -- ftd.column:
 width: fill-container
 background.solid: #0d0d0d
-padding.vw: 4
 padding.vw if {ftd.device == "mobile"}: 6
 
 
@@ -1215,96 +1225,105 @@ border-color: #b7ab98
 padding-vertical.vw: 4
 wrap: true
 
-
-
 -- ftd.column:
-width.fixed.vw: 30
+width.fixed.vw: 32
 width.fixed.vw if {ftd.device == "mobile"}: 48
-spacing.fixed.vw: 2
+spacing.fixed.vw: 1
+spacing.fixed.vw if {ftd.device == "mobile"}: 4
+
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+wrap: true
+
+/-- ftd.image:
+src: $footer.company-logo
+width.fixed.vw: 6
+height.fixed.vw: 6
+width.fixed.vw if {ftd.device == "mobile"}: 20
+height.fixed.vw if {ftd.device == "mobile"}: 16
+
 
 
 -- ftd.text: $footer.caption-1
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
-color: #b7ab98
+role if {ftd.device == "mobile"}: $inherited.types.heading-small
+color: #eb5939
+margin-top.px if {ftd.device == "mobile"}: 10
 
--- ftd.text: $footer.caption-text-1
-role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.fine-print
-color: #b7ab98
-
--- ftd.text: $footer.caption-text-2
-role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.fine-print
-color: #b7ab98
-
--- ftd.text: $footer.caption-text-3
-role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.fine-print
-color: #b7ab98
-
--- ftd.text: $footer.caption-text-4
-role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.fine-print
-color: #b7ab98
-
--- ftd.text: $footer.caption-text-5
-role: $inherited.types.heading-small
-role if {ftd.device == "mobile"}: $inherited.types.fine-print
-color: #b7ab98
-
--- end: ftd.column
-
--- ftd.column:
-width.fixed.vw: 30
-width.fixed.vw if {ftd.device == "mobile"}: 48
-spacing.fixed.vw: 2
-
-
--- ftd.text: $footer.caption-2
-role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
-color: #b7ab98
-
--- ftd.row:
-spacing.fixed.vw: 2
-
--- ftd.image:
-src: $footer.caption-logo-1
-width.fixed.vw: 3
-height.fixed.vw: 3
-width.fixed.vw if {ftd.device == "mobile"}: 8
-height.fixed.vw if {ftd.device == "mobile"}: 8
-
--- ftd.image:
-src: $footer.caption-logo-2
-width.fixed.vw: 3
-height.fixed.vw: 3
-width.fixed.vw if {ftd.device == "mobile"}: 8
-height.fixed.vw if {ftd.device == "mobile"}: 8
 
 -- end: ftd.row
 
+-- ftd.text: $footer.about
+role: $inherited.types.heading-tiny
+role if {ftd.device == "mobile"}: $inherited.types.copy-large
+color: #b7ab98
+
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.vw: 30
+width.fixed.vw: 20
 width.fixed.vw if {ftd.device == "mobile"}: 48
 spacing.fixed.vw: 2
 
--- ftd.text: $footer.caption-3
+-- ftd.text: $footer.caption-2
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-tiny
-color: #b7ab98
+role if {ftd.device == "mobile"}: $inherited.types.heading-small
+color: #eb5939
 
 -- ftd.image:
-src: $footer.caption-logo-3
+src: $footer.contact-logo
 width.fixed.vw: 6
 height.fixed.vw: 6
 width.fixed.vw if {ftd.device == "mobile"}: 12
 height.fixed.vw if {ftd.device == "mobile"}: 12
 margin-left.px if {ftd.device == "desktop"}: 8
 margin-left.px if {ftd.device == "mobile"}: 4
+link: $footer.contact-link
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 20
+width.fixed.vw if {ftd.device == "mobile"}: 48
+spacing.fixed.vw: 2
+
+
+-- ftd.text: $footer.caption-3
+role: $inherited.types.heading-medium 
+role if {ftd.device == "mobile"}: $inherited.types.heading-small
+color: #eb5939
+
+-- ftd.text: $footer.caption-text-1
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.copy-large
+link: $footer.text-link-1
+color: #b7ab98
+
+-- ftd.text: $footer.caption-text-2
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.copy-large
+color: #b7ab98
+link: $footer.text-link-2
+
+-- ftd.text: $footer.caption-text-3
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.copy-large
+color: #b7ab98
+link: $footer.text-link-3
+
+-- ftd.text: $footer.caption-text-4
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.copy-large
+color: #b7ab98
+link: $footer.text-link-4
+
+-- ftd.text: $footer.caption-text-5
+role: $inherited.types.heading-small
+role if {ftd.device == "mobile"}: $inherited.types.copy-large
+color: #b7ab98
+link: $footer.text-link-5
 
 -- end: ftd.column
 
@@ -1314,23 +1333,56 @@ margin-left.px if {ftd.device == "mobile"}: 4
 width: fill-container
 border-top-width.px: 2
 border-color: #b7ab98
-align-content: center
+spacing: space-between
 padding-top.vw if {ftd.device == "desktop"}: 1
+wrap: true
+
+-- ftd.column:
+width.fixed.vw: 24
+width.fixed.vw if {ftd.device == "mobile"}: 60
+
 
 -- ftd.text: $footer.copyright
 role: $inherited.types.heading-tiny
-role if {ftd.device == "mobile"}: $inherited.types.fine-print
+role if {ftd.device == "mobile"}: $inherited.types.copy-large
 color: #b7ab98
-text-align: center
+text-align: start
 margin-top.px if {ftd.device == "mobile"}: 8
+
+-- end: ftd.column
+
+-- ftd.row:
+width.fixed.vw: 20 
+width.fixed.vw if {ftd.device == "mobile"}: 24 
+margin-top.px if {ftd.device == "mobile"}: 10
+spacing.fixed.px if {ftd.device == "mobile"}: 12
+
+
+-- ftd.image:
+src: $footer.social-logo-1
+width.fixed.vw: 3
+height.fixed.vw: 3
+width.fixed.vw if {ftd.device == "mobile"}: 8
+height.fixed.vw if {ftd.device == "mobile"}: 8
+link: $footer.social-link-1
+
+-- ftd.image:
+src: $footer.social-logo-2
+width.fixed.vw: 3
+height.fixed.vw: 3
+width.fixed.vw if {ftd.device == "mobile"}: 8
+height.fixed.vw if {ftd.device == "mobile"}: 8
+link: $footer.social-link-2
+
+
+-- end: ftd.row
+
 
 -- end: ftd.row
 
 -- end: ftd.column
 
 -- end: footer
-
-
 
 
 
@@ -1358,18 +1410,6 @@ string sub-title:
 string cta-button:
 string button-link-1:
 boolean $is-active-1: false
-string foot-caption-1: 
-string foot-caption-2:
-string foot-caption-3:
-string foot-text-1:
-string foot-text-2:
-string foot-text-3:
-string foot-text-4:
-string foot-text-5:
-ftd.image-src foot-logo-1:
-ftd.image-src foot-logo-2:
-ftd.image-src foot-logo-3:
-string foot-copyright:
 children child:
 
 
@@ -1485,22 +1525,6 @@ children: $web3-page.child
 
 
 -- end: ftd.column
-
-
-
--- footer:
-caption-1: $web3-page.foot-caption-1
-caption-2: $web3-page.foot-caption-2
-caption-3: $web3-page.foot-caption-3
-caption-text-1: $web3-page.foot-text-1
-caption-text-2: $web3-page.foot-text-2
-caption-text-3: $web3-page.foot-text-3
-caption-text-4: $web3-page.foot-text-4
-caption-text-5: $web3-page.foot-text-5
-caption-logo-1: $web3-page.foot-logo-1
-caption-logo-2: $web3-page.foot-logo-2
-caption-logo-3: $web3-page.foot-logo-3
-copyright: $web3-page.foot-copyright
 
 -- end: ftd.column
 

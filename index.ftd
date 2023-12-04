@@ -14,18 +14,6 @@ title: **Welcome To Web3 Innovators Nexus Journey**
 sub-title: Build and Grow together
 cta-button: **Join Us**
 button-link-1: https://www.linkedin.com/ 
-foot-caption-1: Community
-foot-caption-2: Follow Us
-foot-caption-3: Contact Us
-foot-text-1: About Us
-foot-text-2: Events
-foot-text-3: Mentorship Program
-foot-text-4: Networking
-foot-text-5: Contact Us
-foot-logo-1: $assets.files.assets.c-logo-1.png
-foot-logo-2: $assets.files.assets.c-logo-2.png
-foot-logo-3: $assets.files.assets.c-logo-3.jpg
-foot-copyright: web3innovatorsnexus © Copyright 2023. All Rights Reserved.
 
 
 -- lib.hero-1: 
@@ -224,6 +212,29 @@ contact-text-4: City
 contact-text-5: Message
 contact-button-text: SUBMIT
 contact-button-link: https://trizui.trizwit.com/ 
+
+-- lib.footer:
+caption-1: web3innovators nexus
+caption-2: Contact Us
+caption-3: Community
+caption-text-1: About Us
+caption-text-2: Events
+caption-text-3: Mentorship Program
+caption-text-4: Networking
+caption-text-5: Contact Us
+text-link-1: index.html#hero-1
+text-link-2: index.html#events
+text-link-3: index.html#hero-2
+text-link-4: index.html#network
+text-link-5: index.html#contact
+social-logo-1: $assets.files.assets.c-logo-1.png
+social-logo-2: $assets.files.assets.c-logo-2.png
+contact-logo: $assets.files.assets.contact-logo.jpg
+social-link-1: https://twitter.com/
+social-link-2: linkedin.com
+contact-link: https://trizui.trizwit.com/ 
+copyright: web3innovatorsnexus © Copyright 2023  All Rights Reserved.
+about: An online-based solution combining AI's potential with the simplicity of a subscription-based software method.
 
 
 -- end: lib.web3-page

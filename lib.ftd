@@ -891,7 +891,7 @@ margin-horizontal.vw: 4
 
 -- ftd.text: $network-comp.title
 role: $inherited.types.heading-small
-color: #b7ab98
+color: #f6854c
 ;;text-align: center
 
 -- ftd.text: $network-comp.content

@@ -861,15 +861,16 @@ body content:
 if: { ftd.device == "desktop" }
 width.fixed.vw: 24
 height.fixed.vw: 14
-align-content: center
+;;align-content: center
 spacing.fixed.px: 10
 
 
 
 -- ftd.text: $network-comp.title
 role: $inherited.types.heading-small
-color: #b7ab98
+color: #f6854c
 text-align: center
+align-self: center
 
 -- ftd.text: $network-comp.content
 role: $inherited.types.heading-tiny
@@ -992,7 +993,7 @@ string contact-text-3:
 string contact-text-4:
 string contact-text-5:
 string contact-button-text:
-string contact-button-link:
+;;string contact-button-link:
 boolean $hover-text-1: false
 boolean $hover-text-2: false
 boolean $hover-text-3: false
@@ -1116,7 +1117,7 @@ margin-right.px: 120
 color if {contact-1.hover-button}: #eb5939
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-button, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-button, v = false)
-link: $contact-1.contact-button-link
+;;link: $contact-1.contact-button-link
 
 -- end: ftd.column
 

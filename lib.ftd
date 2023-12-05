@@ -95,11 +95,11 @@ boolean $hover-text-5: false
 
 -- ftd.row:
 width: fill-container
-height.fixed.vh: 20
+height.fixed.vh: 15
 spacing: space-between
 ;; border-color: #b8ac9980
 ;; border-bottom-width.px: 2
-;; background.solid: #000
+background.solid: #000
 padding.px: 20
 align-content: center
 
@@ -636,6 +636,7 @@ id: hero-2
 width: fill-container
 height: auto
 background.solid: #0d0d0d
+padding-vertical.vw: 4  
 align-content: center
 
 
@@ -645,6 +646,7 @@ width: fill-container
 height: hug-content
 ;;align-content: center
 padding-vertical.px if { ftd.device == "desktop" }: 96
+spacing: space-between
 background.solid: #0d0d0d
 
 -- ftd.column:
@@ -681,7 +683,7 @@ link: $hero-2.button-link
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.percent: 45
+width.fixed.percent: 50
 height: auto
 align-content: center
 border-color: red
@@ -1012,7 +1014,7 @@ placeholder: $contact-1.contact-text-1
 width: fill-container
 padding-vertical.px: 8
 padding-horizontal.px: 16
-border-bottom-width.px: 1
+border-bottom-width.px: 1   
 border-color if {contact-1.hover-text-1}: #b7ab98
 border-color: #000
 type: text
@@ -1095,7 +1097,7 @@ color: #b7ab98
 margin-top.px: 30
 align-self: end
 margin-right.px: 120
-color if {contact-1.hover-button}: #fff
+color if {contact-1.hover-button}: #eb5939
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-button, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-button, v = false)
 link: $contact-1.contact-button-link
@@ -1226,7 +1228,7 @@ padding-vertical.vw: 4
 wrap: true
 
 -- ftd.column:
-width.fixed.vw: 32
+width.fixed.vw: 20
 width.fixed.vw if {ftd.device == "mobile"}: 48
 spacing.fixed.vw: 1
 spacing.fixed.vw if {ftd.device == "mobile"}: 4
@@ -1329,6 +1331,8 @@ link: $footer.text-link-5
 
 -- end: ftd.row
 
+
+
 -- ftd.row:
 width: fill-container
 border-top-width.px: 2
@@ -1356,20 +1360,22 @@ width.fixed.vw: 20
 width.fixed.vw if {ftd.device == "mobile"}: 24 
 margin-top.px if {ftd.device == "mobile"}: 10
 spacing.fixed.px if {ftd.device == "mobile"}: 12
+align-content: top-right
 
 
 -- ftd.image:
 src: $footer.social-logo-1
-width.fixed.vw: 3
-height.fixed.vw: 3
+width.fixed.vw: 4
+height.fixed.vw: 4
 width.fixed.vw if {ftd.device == "mobile"}: 8
 height.fixed.vw if {ftd.device == "mobile"}: 8
 link: $footer.social-link-1
 
+
 -- ftd.image:
 src: $footer.social-logo-2
-width.fixed.vw: 3
-height.fixed.vw: 3
+width.fixed.vw: 4
+height.fixed.vw: 4
 width.fixed.vw if {ftd.device == "mobile"}: 8
 height.fixed.vw if {ftd.device == "mobile"}: 8
 link: $footer.social-link-2

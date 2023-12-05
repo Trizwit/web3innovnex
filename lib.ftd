@@ -1,3 +1,8 @@
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+
+
+
+
 -- boolean $form-open: false
 
 
@@ -253,7 +258,7 @@ spacing.fixed.vh: 5
 padding-top.px: 36
 
 -- ftd.text: $drop-navbar.cta-text-1
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 link: $drop-navbar.cta-link-1
 color if {drop-navbar.hover-text-1}: #fff
@@ -261,7 +266,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-1, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-2
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 link: $drop-navbar.cta-link-2
 color if {drop-navbar.hover-text-2}: #fff
@@ -269,7 +274,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-2, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-2, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-3
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 link: $drop-navbar.cta-link-3
 color if {drop-navbar.hover-text-3}: #fff
@@ -277,7 +282,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-3, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-3, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-4
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 link: $drop-navbar.cta-link-4
 color if {drop-navbar.hover-text-4}: #fff
@@ -285,7 +290,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-4, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-4, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-5
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 link: $drop-navbar.cta-link-5
 color if {drop-navbar.hover-text-5}: #fff
@@ -364,13 +369,13 @@ margin-left.px: 100
 
 -- ftd.text: $hero-1.headline
 margin-bottom.px: 16
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 
 -- ftd.text: $hero-1.content
 margin-bottom.px: 32
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 
 
@@ -404,7 +409,7 @@ margin-top.px: 20
 spacing.fixed.vw: 2
 
 -- ftd.text: $hero-1.headline
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 
@@ -489,13 +494,13 @@ align-content: center
 -- ftd.text: $event.time
 color: #b7ab98
 color if {event.hover}: #000
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 text-align: center
 
 -- ftd.text: $event.location
 color: #b7ab98
 color if {event.hover}: #000
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 text-align: center
 
 -- end: ftd.column
@@ -592,7 +597,7 @@ spacing.fixed.vw: 2
 
 
 -- ftd.text: $events.title
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 
@@ -612,7 +617,7 @@ margin-left.px: 10
 
 
 -- ftd.text: $events.title
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 
@@ -672,12 +677,12 @@ margin-right.px: 100
 
 -- ftd.text: $hero-2.headline
 margin-bottom.px: 16
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 -- ftd.text: $hero-2.content
 margin-bottom.px: 32
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 
 -- ftd.text: $hero-2.cta-button
@@ -732,7 +737,7 @@ margin-top.px: 20
 spacing.fixed.vw: 8
 
 -- ftd.text: $hero-2.headline
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 -- ftd.image:
@@ -790,8 +795,8 @@ margin-left.px if { ftd.device == "mobile" }: 10
 
 
 -- ftd.text: $partners-section.heading
-role: $inherited.types.heading-large
-role if { ftd.device == "mobile" }: $inherited.types.heading-large
+role: $fira-code-size-50-400
+role if { ftd.device == "mobile" }: $fira-code-size-50-400
 color: #eb5939
 
 
@@ -867,7 +872,7 @@ spacing.fixed.px: 10
 
 
 -- ftd.text: $network-comp.title
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 text-align: center
 
@@ -889,7 +894,7 @@ margin-horizontal.vw: 4
 
 
 -- ftd.text: $network-comp.title
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 ;;text-align: center
 
@@ -931,7 +936,7 @@ align-content: center
 
 
 -- ftd.text: $network.heading
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 
@@ -954,7 +959,7 @@ spacing.fixed.vh: 4
 ;;align-content: center
 
 -- ftd.text: $network.heading
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 margin-left.px: 10
 
@@ -1019,7 +1024,7 @@ spacing.fixed.px: 20
 align-content if {ftd.device == "mobile"}: center
 
 -- ftd.text: $contact-1.contact-heading
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 margin-top.px if {ftd.device == "mobile"}: 50
 margin-left.px if {ftd.device == "mobile"}: 10
@@ -1034,7 +1039,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-1}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-1, v = false)
@@ -1049,7 +1054,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-2}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-2, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-2, v = false)
@@ -1064,7 +1069,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-3}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-3, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-3, v = false)
@@ -1079,7 +1084,7 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-4}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-4, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-4, v = false)
@@ -1101,14 +1106,14 @@ border-bottom-width.px: 1
 border-color if {contact-1.hover-text-5}: #b7ab98
 border-color: #000
 type: text
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-5, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-5, v = false)
 color: #b7ab98
 
 -- ftd.text: $contact-1.contact-button-text
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 margin-top.px: 30
 align-self: end
@@ -1144,7 +1149,7 @@ margin-left.px if {ftd.device == "mobile"}: 10
 padding-vertical.vw: 6
 
 -- ftd.text: $online-events.title
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 
@@ -1266,7 +1271,7 @@ height.fixed.vw if {ftd.device == "mobile"}: 16
 
 -- ftd.text: $footer.caption-1
 role: $inherited.types.heading-medium 
-role if {ftd.device == "mobile"}: $inherited.types.heading-large
+role if {ftd.device == "mobile"}: $fira-code-size-50-400
 color: #eb5939
 margin-top.px if {ftd.device == "mobile"}: 10
 
@@ -1320,31 +1325,31 @@ role if {ftd.device == "mobile"}: $inherited.types.heading-medium
 color: #eb5939
 
 -- ftd.text: $footer.caption-text-1
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 role if {ftd.device == "mobile"}: $inherited.types.copy-large
 link: $footer.text-link-1
 color: #b7ab98
 
 -- ftd.text: $footer.caption-text-2
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 role if {ftd.device == "mobile"}: $inherited.types.copy-large
 color: #b7ab98
 link: $footer.text-link-2
 
 -- ftd.text: $footer.caption-text-3
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 role if {ftd.device == "mobile"}: $inherited.types.copy-large
 color: #b7ab98
 link: $footer.text-link-3
 
 -- ftd.text: $footer.caption-text-4
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 role if {ftd.device == "mobile"}: $inherited.types.copy-large
 color: #b7ab98
 link: $footer.text-link-4
 
 -- ftd.text: $footer.caption-text-5
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 role if {ftd.device == "mobile"}: $inherited.types.copy-large
 color: #b7ab98
 link: $footer.text-link-5
@@ -1453,7 +1458,7 @@ $on-click$: $ftd.toggle($a = $form-open)
 
 
 -- ftd.text-input:
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #fff
 placeholder: Name
 width: fill-container
@@ -1463,7 +1468,7 @@ background.solid: #0d0d0d
 border-radius.px: 4
 
 -- ftd.text-input:
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #fff
 placeholder: Email
 width: fill-container
@@ -1473,7 +1478,7 @@ background.solid: #0d0d0d
 border-radius.px: 4
 
 -- ftd.text-input:
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #fff
 placeholder: Subject
 width: fill-container
@@ -1483,7 +1488,7 @@ background.solid: #0d0d0d
 border-radius.px: 4
 
 -- ftd.text-input:
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #fff
 placeholder: Message
 width: fill-container
@@ -1496,7 +1501,7 @@ border-radius.px: 4
 
 
 -- ftd.text: SUBMIT
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #fff
 padding-horizontal.px: 16
 padding-vertical.px: 8
@@ -1590,13 +1595,13 @@ padding-horizontal.vw: 8
 padding-bottom.vh: 5
 
 -- ftd.text: $web3-page.title
-role: $inherited.types.heading-hero
+role: $fira-code-size-80-700
 color: #b7ab98
 padding-right.vw: 20
 padding-top.vw: 2
 
 -- ftd.text: $web3-page.sub-title
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 
 -- ftd.text: $web3-page.cta-button
@@ -1625,13 +1630,13 @@ margin-top.vw: 16
 
 
 -- ftd.text: $web3-page.title
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #b7ab98
 padding-right.vw: 10
 
 
 -- ftd.text: $web3-page.sub-title
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 color: #b7ab98
 
 -- ftd.text: $web3-page.cta-button
@@ -1665,3 +1670,81 @@ children: $web3-page.child
 -- end: ftd.column
 
 -- end: web3-page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.type fira-code-size-80-desktop:
+size.px: 80
+weight: 700
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-48-mobile:
+size.px: 48
+weight: 700
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-80-700:
+desktop: $fira-code-size-80-desktop
+mobile: $fira-code-size-48-mobile
+
+
+
+
+
+
+-- ftd.type fira-code-size-50-desktop:
+size.px: 50
+weight: 500
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-36-mobile:
+size.px: 36
+weight: 500
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-50-400:
+desktop: $fira-code-size-50-desktop
+mobile: $fira-code-size-36-mobile
+
+
+
+
+
+
+-- ftd.type fira-code-size-24-desktop:
+size.px: 24
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-22-mobile:
+size.px: 22
+weight: 400
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-24-400:
+desktop: $fira-code-size-24-desktop
+mobile: $fira-code-size-22-mobile

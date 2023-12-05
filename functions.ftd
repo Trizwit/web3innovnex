@@ -1,0 +1,22 @@
+-- string $dummy: Undefined
+
+-- record contactData:
+string name: 
+string email: 
+string phoneNumber: 
+string city: 
+body message: 
+
+
+-- contactData $contactDataObj: 
+name: *$dummy
+email: *$dummy
+phoneNumber: *$dummy
+city: *$dummy
+message: *$dummy
+
+-- void update-mint-cost(a):
+contactData list $a:
+js: contact.js
+
+alert(a)

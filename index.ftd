@@ -15,22 +15,15 @@ sub-title: Build and Grow together
 cta-button: **Join Us**
 button-link-1: https://www.linkedin.com/groups/14303410/ 
 
-
-
 -- lib.form: 
-
-
-
 
 -- lib.hero-1: 
 cover: $assets.files.assets.about.jpg
 headline: About Us
 
 We empower Web3 founders to spread their wings and grow. 
-We wholeheartedly embrace the vital role of community support in propelling our founders to new heights.
-
-
-
+We wholeheartedly embrace the vital role of community support in propelling our founders 
+to new heights.
 
 -- lib.events:
 title: Events
@@ -235,9 +228,7 @@ contact-text-3: Phone Number
 contact-text-4: City
 contact-text-5: Message
 contact-button-text: SUBMIT
-contact-button-link: https://trizui.trizwit.com/ 
-
-
+;;contact-button-link: https://trizui.trizwit.com/ 
 
 
 -- lib.footer:
@@ -262,13 +253,6 @@ social-link-2: https://www.linkedin.com/groups/14303410/
 contact-link: https://calendly.com/wallethunter/15min?month=2023-12 
 copyright: web3innovatorsnexus © Copyright 2023  All Rights Reserved.
 about: An online-based solution combining AI's potential with the simplicity of a subscription-based software method.
-
-
-
-
-
-
-
 
 
 -- end: lib.web3-page

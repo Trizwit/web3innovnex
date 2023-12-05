@@ -1290,15 +1290,21 @@ role: $inherited.types.heading-medium
 role if {ftd.device == "mobile"}: $inherited.types.heading-medium
 color: #eb5939
 
--- ftd.image:
-src: $footer.contact-logo
-width.fixed.vw: 6
-height.fixed.vw: 6
+-- ftd.row:
+width.fixed.vw if {ftd.device == "desktop"}: 6
+height.fixed.vw if {ftd.device == "desktop"}: 6
 width.fixed.vw if {ftd.device == "mobile"}: 12
 height.fixed.vw if {ftd.device == "mobile"}: 12
 margin-left.px if {ftd.device == "desktop"}: 8
 margin-left.px if {ftd.device == "mobile"}: 4
 link: $footer.contact-link
+
+-- ftd.image:
+src: $footer.contact-logo
+width: fill-container
+height: fill-container
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -1354,7 +1360,7 @@ width: fill-container
 border-top-width.px: 2
 border-color: #b7ab98
 spacing: space-between
-padding-top.vw if {ftd.device == "desktop"}: 1
+padding-vertical.vw if {ftd.device == "desktop"}: 1
 wrap: true
 
 -- ftd.column:
@@ -1373,32 +1379,42 @@ margin-top.px if {ftd.device == "mobile"}: 8
 
 -- ftd.row:
 width.fixed.vw: 20 
-width.fixed.vw if {ftd.device == "mobile"}: 24 
 margin-top.px if {ftd.device == "mobile"}: 10
-spacing.fixed.px if {ftd.device == "mobile"}: 12
-align-content: top-right
+spacing.fixed.px: 12
+align-content if {ftd.device == "deskktop"}: top-right
 
 
--- ftd.image:
-src: $footer.social-logo-1
+-- ftd.column:
 width.fixed.vw: 4
 height.fixed.vw: 4
 width.fixed.vw if {ftd.device == "mobile"}: 8
 height.fixed.vw if {ftd.device == "mobile"}: 8
 link: $footer.social-link-1
 
-
 -- ftd.image:
-src: $footer.social-logo-2
+src: $footer.social-logo-1
+width: fill-container
+height: fill-container
+fit: contain
+
+-- end: ftd.column
+
+-- ftd.column:
 width.fixed.vw: 4
 height.fixed.vw: 4
 width.fixed.vw if {ftd.device == "mobile"}: 8
 height.fixed.vw if {ftd.device == "mobile"}: 8
 link: $footer.social-link-2
 
+-- ftd.image:
+src: $footer.social-logo-2
+width: fill-container
+height: fill-container
+fit: contain
+
+-- end: ftd.column
 
 -- end: ftd.row
-
 
 -- end: ftd.row
 
@@ -1492,9 +1508,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $form.hover-button, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $form.hover-button, v = false)
 ;; link: $hover.contact-button-link
 
-
 -- end: ftd.column
-
 
 -- end: form
 
@@ -1570,8 +1584,6 @@ background.solid: #0d0d0d
 if: { ftd.device == "desktop" }
 width: fill-container
 spacing.fixed.vw: 2
-;; background.solid: #0d0d0d
-;; border-color: grey
 border-bottom-width.px: 2
 padding-top.vh: 20
 padding-horizontal.vw: 8
@@ -1609,7 +1621,7 @@ width: fill-container
 spacing.fixed.vw: 4
 background.solid: #0d0d0d
 padding.vw: 8
-margin-top.vw: 6
+margin-top.vw: 16
 
 
 -- ftd.text: $web3-page.title

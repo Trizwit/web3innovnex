@@ -1,3 +1,8 @@
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+
+
+
+
 -- boolean $form-open: false
 
 
@@ -1590,7 +1595,7 @@ padding-horizontal.vw: 8
 padding-bottom.vh: 5
 
 -- ftd.text: $web3-page.title
-role: $inherited.types.heading-hero
+role: $fira-code-size-80-700
 color: #b7ab98
 padding-right.vw: 20
 padding-top.vw: 2
@@ -1665,3 +1670,41 @@ children: $web3-page.child
 -- end: ftd.column
 
 -- end: web3-page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.type fira-code-size-80-desktop:
+size.px: 80
+weight: 700
+font-family: $fira-code-assets.fonts.Fira-Code
+
+
+-- ftd.type fira-code-size-48-mobile:
+size.px: 48
+weight: 700
+font-family: $fira-code-assets.fonts.Fira-Code
+
+-- ftd.responsive-type fira-code-size-80-700:
+desktop: $fira-code-size-80-desktop
+mobile: $fira-code-size-48-mobile

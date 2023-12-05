@@ -1,3 +1,8 @@
+-- boolean $form-open: false
+
+
+
+
 -- component navbar:
 ftd.image-src logo:
 string cta-text-1:
@@ -626,7 +631,7 @@ children: $events.child
 -- component hero-2:
 ftd.image-src cover:
 caption headline:
-string button-link:
+;; string button-link:
 string cta-button:
 boolean $hero-hover: false
 body content:
@@ -677,8 +682,9 @@ background.solid: orange
 background.solid if {hero-2.hero-hover}: pink
 $on-mouse-enter$: $ftd.set-bool($a = $hero-2.hero-hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $hero-2.hero-hover, v = false)
+$on-click$: $ftd.toggle($a = $form-open)
 color: #0d0d0d
-link: $hero-2.button-link
+;; link: $hero-2.button-link
 
 -- end: ftd.column
 
@@ -739,8 +745,9 @@ background.solid: orange
 background.solid if {hero-2.hero-hover}: pink
 $on-mouse-enter$: $ftd.set-bool($a = $hero-2.hero-hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $hero-2.hero-hover, v = false)
+$on-click$: $ftd.toggle($a = $form-open)
 color: #0d0d0d
-link: $hero-2.button-link
+;; link: $hero-2.button-link
 
 -- end: ftd.column
 
@@ -1389,6 +1396,108 @@ link: $footer.social-link-2
 -- end: ftd.column
 
 -- end: footer
+
+
+
+
+
+
+
+
+
+
+-- component form:
+boolean $hover-button: false
+
+-- ftd.column:
+if: { $form-open }
+width.fixed.percent if {ftd.device == "desktop"}: 35
+width.fixed.percent if {ftd.device == "mobile"}: 90
+height: auto
+background.solid: #eb5939
+border-radius.px: 8
+spacing.fixed.vh: 4
+anchor: window
+padding.px: 20
+top.px: 120
+
+
+-- ftd.image:
+src: $assets.files.assets.cross.png
+$on-click$: $ftd.toggle($a = $form-open)
+
+
+-- ftd.text-input:
+role: $inherited.types.heading-small
+color: #fff
+placeholder: Name
+width: fill-container
+padding-vertical.px: 8
+padding-horizontal.px: 16
+background.solid: #0d0d0d
+border-radius.px: 4
+
+-- ftd.text-input:
+role: $inherited.types.heading-small
+color: #fff
+placeholder: Email
+width: fill-container
+padding-vertical.px: 8
+padding-horizontal.px: 16
+background.solid: #0d0d0d
+border-radius.px: 4
+
+-- ftd.text-input:
+role: $inherited.types.heading-small
+color: #fff
+placeholder: Subject
+width: fill-container
+padding-vertical.px: 8
+padding-horizontal.px: 16
+background.solid: #0d0d0d
+border-radius.px: 4
+
+-- ftd.text-input:
+role: $inherited.types.heading-small
+color: #fff
+placeholder: Message
+width: fill-container
+height.fixed.vh: 25
+multiline: true
+padding-vertical.px: 8
+padding-horizontal.px: 16
+background.solid: #0d0d0d
+border-radius.px: 4
+
+
+-- ftd.text: SUBMIT
+role: $inherited.types.heading-small
+color: #fff
+padding-horizontal.px: 16
+padding-vertical.px: 8
+background.solid: #0d0d0d
+border-radius.px: 8 
+color if {form.hover-button}: #000
+background.solid if {form.hover-button}: #fff
+$on-mouse-enter$: $ftd.set-bool($a = $form.hover-button, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $form.hover-button, v = false)
+;; link: $hover.contact-button-link
+
+
+-- end: ftd.column
+
+
+-- end: form
+
+
+
+
+
+
+
+
+
+
 
 
 

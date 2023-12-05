@@ -137,6 +137,18 @@ logo: $assets.files.assets.p-logo-9.jpg
 -- lib.partner-comp:
 logo: $assets.files.assets.p-logo-10.jpg
 
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-11.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-12.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-13.jpg
+
+-- lib.partner-comp:
+logo: $assets.files.assets.p-logo-14.jpg
+
 
 -- end: lib.partners-section
 

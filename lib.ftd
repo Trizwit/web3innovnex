@@ -21,6 +21,7 @@ string cta-link-5:
 width: fill-container
 height: hug-content
 anchor: window
+z-index: 90
 
 -- ftd.column:
 if: { ftd.device == "desktop" }
@@ -237,19 +238,22 @@ boolean $hover-text-5: false
 -- ftd.row:
 if: {menu-open}
 width: fill-container
-spacing.fixed.vw: 28
+height: fill-container
+spacing: space-between
 background.solid: #000
-padding.px: 32
+padding.px: 20
+anchor: window
+z-index: 100
 
 
 -- ftd.column: 
-width: fill-container
+width: auto
 height: fill-container
-spacing.fixed.vw: 4
+spacing.fixed.vh: 5
 padding-top.px: 36
 
 -- ftd.text: $drop-navbar.cta-text-1
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 color: #b7ab98
 link: $drop-navbar.cta-link-1
 color if {drop-navbar.hover-text-1}: #fff
@@ -257,7 +261,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-1, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-2
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 color: #b7ab98
 link: $drop-navbar.cta-link-2
 color if {drop-navbar.hover-text-2}: #fff
@@ -265,7 +269,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-2, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-2, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-3
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 color: #b7ab98
 link: $drop-navbar.cta-link-3
 color if {drop-navbar.hover-text-3}: #fff
@@ -273,7 +277,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-3, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-3, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-4
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 color: #b7ab98
 link: $drop-navbar.cta-link-4
 color if {drop-navbar.hover-text-4}: #fff
@@ -281,7 +285,7 @@ $on-mouse-enter$: $ftd.set-bool($a = $drop-navbar.hover-text-4, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-4, v = false)
 
 -- ftd.text: $drop-navbar.cta-text-5
-role: $inherited.types.heading-tiny
+role: $inherited.types.heading-small
 color: #b7ab98
 link: $drop-navbar.cta-link-5
 color if {drop-navbar.hover-text-5}: #fff
@@ -290,13 +294,19 @@ $on-mouse-leave$: $ftd.set-bool($a = $drop-navbar.hover-text-5, v = false)
 
 -- end: ftd.column
 
+
+-- ftd.column:
+width.fixed.px: 40
+height.fixed.px: 40
+margin-top.px: 15
+$on-click$: $ftd.set-bool($a = $menu-open, v = false)
+
 -- ftd.image: 
 src: $assets.files.assets.cross.png
-height.fixed.px: 30
-margin-top.px: 30
-margin-right.px: 100
-z-index: 100
-$on-click$: $ftd.set-bool($a = $menu-open, v = false)
+width: fill-container
+height: fill-container
+
+-- end: ftd.column
 
 -- end: ftd.row
 
@@ -495,7 +505,7 @@ text-align: center
 -- ftd.row:
 if: { ftd.device == "mobile" }
 width: fill-container
-height.fixed.vw if {event.hover}: 8
+height.fixed.vh if {event.hover}: 8
 spacing: space-between
 align-content: center
 background.solid: #0d0d0d
@@ -583,7 +593,6 @@ spacing.fixed.vw: 2
 
 -- ftd.text: $events.title
 role: $inherited.types.heading-large
-role if { ftd.device == "mobile" }: $inherited.types.heading-medium
 color: #eb5939
 
 
@@ -853,7 +862,7 @@ if: { ftd.device == "desktop" }
 width.fixed.vw: 24
 height.fixed.vw: 14
 align-content: center
-spacing.fixed.vw: 1
+spacing.fixed.px: 10
 
 
 
@@ -875,7 +884,7 @@ if: { ftd.device == "mobile" }
 width: hug-content
 height: hug-content
 ;;align-content: center
-spacing.fixed.vw: 6
+spacing.fixed.px: 10
 margin-horizontal.vw: 4
 
 
@@ -909,6 +918,7 @@ children network-child:
 
 -- ftd.column:
 width: fill-container
+padding-vertical.px: 20
 id: network
 
 
@@ -928,8 +938,7 @@ color: #eb5939
 -- ftd.row:
 width: fill-container
 align-content: center
-spacing: space-between
-;;spacing.fixed.vw: 5
+spacing.fixed.px: 20
 wrap: true
 children: $network.network-child
 
@@ -941,7 +950,7 @@ children: $network.network-child
 -- ftd.column:
 if: { ftd.device == "mobile" }
 width: fill-container
-spacing.fixed.vw: 4
+spacing.fixed.vh: 4
 ;;align-content: center
 
 -- ftd.text: $network.heading
@@ -952,7 +961,7 @@ margin-left.px: 10
 -- ftd.column:
 width: fill-container
 align-content: center
-spacing.fixed.vw: 8
+spacing.fixed.px: 30
 children: $network.network-child
 
 

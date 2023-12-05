@@ -1,0 +1,10 @@
+import: trizwit.github.io/web3innovnex/contact
+
+-- void call-js-fn(a):
+string  $a:
+;;contact.contactData list $a:
+js: contact.js 
+
+
+;;get_data(a) 
+show_alert(a)

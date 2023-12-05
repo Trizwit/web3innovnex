@@ -1,25 +1,18 @@
--- record contact-data:
-caption name: Undefined
-string email: undefined
-string phoneNumber: undefined
-string city: undefined
-body message: undefined
+-- string $dummy: message
+
+-- record contactData:
+caption name: 
+string email: 
+string phoneNumber: 
+string city: 
+body message: 
 
 
-#[derive(serde::Deserialize)]
-struct contactDataObj {
-    name: String,
-    email: string,
-    phoneNumber: string,
-    city: string,
-    message: String
-}
-
--- contact-data: $contact-1.contact-text-1
-email: $contact-1.contact-text-2
-phoneNumber: $contact-1.contact-text-3
-city: $contact-1.contact-text-4
-message: $contact-1.contact-text-5
-
+-- contactData $contactDataObj:
+name: *$dummy
+email: *$dummy
+phoneNumber: *$dummy
+city: *$dummy
+message: *$dummy
 
 

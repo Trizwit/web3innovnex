@@ -1,3 +1,8 @@
+-- import: trizwit.github.io/web3innovnex/contact
+-- import: trizwit.github.io/web3innovnex/functions
+
+
+
 -- component navbar:
 ftd.image-src logo:
 string cta-text-1:
@@ -847,7 +852,6 @@ align-content: center
 spacing.fixed.vw: 1
 
 
-
 -- ftd.text: $network-comp.title
 role: $inherited.types.heading-small
 color: #b7ab98
@@ -974,7 +978,6 @@ string contact-text-3:
 string contact-text-4:
 string contact-text-5:
 string contact-button-text:
-string contact-button-link:
 boolean $hover-text-1: false
 boolean $hover-text-2: false
 boolean $hover-text-3: false
@@ -990,8 +993,6 @@ padding-vertical.percent: 8
 background.solid: #0d0d0d
 spacing: space-evenly
 id: contact
-
-
 
 
 -- ftd.column:
@@ -1020,6 +1021,7 @@ role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-1, v = false)
+$on-input$: $ftd.set-string($a = $contact.contactDataObj.name, v = $VALUE)
 color: #b7ab98
 
 -- ftd.text-input:
@@ -1035,6 +1037,7 @@ role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-2, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-2, v = false)
+$on-input$: $ftd.set-string($a = $contact.contactDataObj.email, v = $VALUE)
 color: #b7ab98
 
 -- ftd.text-input:
@@ -1050,6 +1053,7 @@ role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-3, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-3, v = false)
+$on-input$: $ftd.set-string($a = $contact.contactDataObj.phoneNumber, v = $VALUE)
 color: #b7ab98
 
 -- ftd.text-input:
@@ -1065,6 +1069,7 @@ role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-4, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-4, v = false)
+$on-input$: $ftd.set-string($a = $contact.contactDataObj.city, v = $VALUE)
 color: #b7ab98
 
 
@@ -1087,6 +1092,8 @@ role: $inherited.types.heading-small
 background.solid: #0d0d0d
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-text-5, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-text-5, v = false)
+$on-input$: $ftd.set-string($a = $contact.contactDataObj.message, v = $VALUE)
+;;value if {($contact.contactDataObj.message) != "undefined" }: $contact.contactDataObj.message
 color: #b7ab98
 
 -- ftd.text: $contact-1.contact-button-text
@@ -1098,7 +1105,20 @@ margin-right.px: 120
 color if {contact-1.hover-button}: #fff
 $on-mouse-enter$: $ftd.set-bool($a = $contact-1.hover-button, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $contact-1.hover-button, v = false)
-link: $contact-1.contact-button-link
+$on-click$: $functions.call-js-fn($a = $contact.contactDataObj.name)
+
+/-- ftd.text: $contact.contactDataObj.message
+color: white
+
+/-- ftd.text: $contact.contactDataObj.name
+color: white
+
+/-- ftd.text: $contact.contactDataObj.city
+color: white
+
+/-- ftd.text: $contact.contactDataObj.phoneNumber
+color: white
+
 
 -- end: ftd.column
 

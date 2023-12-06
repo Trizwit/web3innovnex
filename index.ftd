@@ -25,82 +25,82 @@ We empower Web3 founders to spread their wings and grow.
 We wholeheartedly embrace the vital role of community support in propelling our founders 
 to new heights.
 
--- lib.events:
+-- lib.timeline:
 title: Events
 
--- lib.event:
-date: DEC 8, 2023
+-- lib.timeline-comp:
+date: DEC 8 2023
 place: BANGALORE
 location: Draper Startup House For Entrepreneurs Bengaluru
 time: 5:00PM – 9:00PM 
 
--- lib.event:
-date: JAN, 2024
+-- lib.timeline-comp:
+date: JAN 2024
 place: HYDERABAD
 location: Upcoming Event
 time: To Be Announced
 
--- lib.event:
-date: FEB, 2024
+-- lib.timeline-comp:
+date: FEB 2024
 place: MUMBAI
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: MAR, 2024
+-- lib.timeline-comp:
+date: MAR 2024
 place: AHMEDABAD
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: APR, 2024
+-- lib.timeline-comp:
+date: APR 2024
 place: DUBAI
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: MAY, 2024
+-- lib.timeline-comp:
+date: MAY 2024
 place: JAIPUR
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: JUN, 2024
+-- lib.timeline-comp:
+date: JUN 2024
 place: DELHI
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: JUL, 2024
+-- lib.timeline-comp:
+date: JUL 2024
 place: KOLKATA
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: AUG, 2024
+-- lib.timeline-comp:
+date: AUG 2024
 place: BALI
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: SEP, 2024
+-- lib.timeline-comp:
+date: SEP 2024
 place: SINGAPORE
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: OCT, 2024
+-- lib.timeline-comp:
+date: OCT 2024
 place: CHENNAI
 location: Upcoming Event
 time: To Be Announced 
 
--- lib.event:
-date: NOV, 2024
+-- lib.timeline-comp:
+date: NOV 2024
 place: TOKYO
 location: Upcoming Event
 time: To Be Announced 
 
--- end: lib.events
+-- end: lib.timeline
 
 
 

@@ -641,6 +641,224 @@ children: $events.child
 
 
 
+
+-- component timeline-comp:
+string date:
+string place:
+string location:
+string time:
+boolean $hover: false
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
+align-content: center
+background.solid: #0d0d0d
+padding-horizontal.vw: 2
+
+-- ftd.column:
+width.fixed.vw: 8
+height.fixed.vw: 8
+border-radius.percent: 50
+background.solid: #000000
+border-color: #eb5939
+border-width.px: 1
+padding.px: 8
+align-content: center
+
+-- ftd.text: $timeline-comp.date
+color: #b7ab98
+color if {timeline-comp.hover}: #000
+role: $inherited.types.heading-tiny
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.row:
+width.fixed.vw: 6
+border-color: #eb5939
+border-width.px: 2
+
+-- end: ftd.row
+
+-- ftd.column:
+height.fixed.vw: 20
+border-color: #eb5939
+border-left-width.px: 8
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 36
+border-color: #eb5939
+padding.vw: 2
+
+-- ftd.text: $timeline-comp.place
+color: #eb5939
+color if {timeline-comp.hover}: #000
+role: $inherited.types.heading-small
+text-align: start
+margin-bottom.vw: 1
+
+-- ftd.text: $timeline-comp.time
+color: #b7ab98
+color if {timeline-comp.hover}: #000
+role: $inherited.types.heading-tiny
+text-align: start
+
+-- ftd.text: $timeline-comp.location
+color: #b7ab98
+color if {timeline-comp.hover}: #000
+role: $inherited.types.heading-tiny
+text-align: start
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { ftd.device == "mobile" }
+align-content: center
+background.solid: #0d0d0d
+padding-horizontal.vw: 2
+
+
+-- ftd.column:
+width.fixed.vw: 24
+height.fixed.vw: 24
+border-radius.percent: 50
+background.solid: #000000
+border-color: #eb5939
+border-width.px: 1
+align-content: center
+
+-- ftd.text: $timeline-comp.date
+color: #b7ab98
+color if {timeline-comp.hover}: #000
+role: $inherited.types.heading-tiny
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.row:
+width.fixed.vw: 6
+border-color: #eb5939
+border-width.px: 2
+
+-- end: ftd.row
+
+-- ftd.column:
+height.fixed.vw: 68
+border-color: #eb5939
+border-left-width.px: 6
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.vw: 53
+height.fixed.vw: 66
+padding.vw: 2
+margin-left.px: 8
+
+-- ftd.text: $timeline-comp.place
+color: #eb5939
+color if {timeline-comp.hover}: #000
+role: $inherited.types.heading-small
+text-align: start
+padding-bottom.vw: 2
+
+-- ftd.text: $timeline-comp.time
+color: #b7ab98
+color if {timeline-comp.hover}: #000
+role: $inherited.types.heading-tiny
+text-align: start
+padding-bottom.vw: 1
+
+-- ftd.text: $timeline-comp.location
+color: #b7ab98
+color if {timeline-comp.hover}: #000
+role: $inherited.types.heading-tiny
+text-align: start
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: timeline-comp
+
+
+
+
+
+
+
+
+
+
+-- component timeline:
+caption title:
+children child:
+
+-- ftd.column:
+width: fill-container
+id: timeline
+
+-- ftd.column:
+if: { ftd.device == "desktop" }
+width: fill-container
+spacing.fixed.vw: 2
+
+
+-- ftd.text: $timeline.title
+role: $inherited.types.heading-large
+color: #eb5939
+
+-- ftd.column:
+width: fill-container
+children: $timeline.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+width: fill-container
+spacing.fixed.vw: 2
+
+
+
+-- ftd.text: $timeline.title
+role: $inherited.types.heading-large
+color: #eb5939
+margin-left.px: 10
+
+
+-- ftd.column:
+width: fill-container
+children: $timeline.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: timeline
+
+
+
+
+
+
+
+
+
+
 -- component hero-2:
 ftd.image-src cover:
 caption headline:
@@ -1401,8 +1619,8 @@ align-content if {ftd.device == "deskktop"}: top-right
 
 
 -- ftd.column:
-width.fixed.vw: 4
-height.fixed.vw: 4
+width.fixed.vw: 3
+height.fixed.vw: 3
 width.fixed.vw if {ftd.device == "mobile"}: 8
 height.fixed.vw if {ftd.device == "mobile"}: 8
 link: $footer.social-link-1
@@ -1416,8 +1634,8 @@ fit: contain
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.vw: 4
-height.fixed.vw: 4
+width.fixed.vw: 3
+height.fixed.vw: 3
 width.fixed.vw if {ftd.device == "mobile"}: 8
 height.fixed.vw if {ftd.device == "mobile"}: 8
 link: $footer.social-link-2

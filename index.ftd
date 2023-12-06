@@ -240,7 +240,7 @@ contact-text-3: Phone Number
 contact-text-4: City
 contact-text-5: Message
 contact-button-text: SUBMIT
-contact-button-link: https://trizui.trizwit.com/ 
+;;contact-button-link: https://trizui.trizwit.com/ 
 
 
 -- lib.footer:

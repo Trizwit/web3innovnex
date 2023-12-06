@@ -686,7 +686,7 @@ shadow: $box
 -- ftd.text: $timeline-comp.date
 color: #ffffff
 color if {timeline-comp.hover}: #000
-role: $inherited.types.heading-tiny
+role: $fira-code-size-24-400
 text-align: center
 
 -- end: ftd.column
@@ -718,20 +718,20 @@ shadow: $box
 -- ftd.text: $timeline-comp.place
 color: #eb5939
 color if {timeline-comp.hover}: #000
-role: $inherited.types.heading-small
+role: $fira-code-size-24-400
 text-align: start
 margin-bottom.vw: 1
 
 -- ftd.text: $timeline-comp.time
 color: #b7ab98
 color if {timeline-comp.hover}: #000
-role: $inherited.types.heading-tiny
+role: $fira-code-size-24-400
 text-align: start
 
 -- ftd.text: $timeline-comp.location
 color: #b7ab98
 color if {timeline-comp.hover}: #000
-role: $inherited.types.heading-tiny
+role: $fira-code-size-24-400
 text-align: start
 
 -- end: ftd.column
@@ -758,7 +758,7 @@ shadow: $box
 -- ftd.text: $timeline-comp.date
 color: #b7ab98
 color if {timeline-comp.hover}: #000
-role: $inherited.types.heading-tiny
+role: $fira-code-size-12-mobile
 text-align: center
 
 -- end: ftd.column
@@ -787,21 +787,21 @@ margin-left.px: 8
 -- ftd.text: $timeline-comp.place
 color: #eb5939
 color if {timeline-comp.hover}: #000
-role: $inherited.types.heading-small
+role: $fira-code-size-22-mobile
 text-align: start
 padding-bottom.vw: 2
 
 -- ftd.text: $timeline-comp.time
 color: #b7ab98
 color if {timeline-comp.hover}: #000
-role: $inherited.types.heading-tiny
+role: $fira-code-size-16-mobile
 text-align: start
 padding-bottom.vw: 1
 
 -- ftd.text: $timeline-comp.location
 color: #b7ab98
 color if {timeline-comp.hover}: #000
-role: $inherited.types.heading-tiny
+role: $fira-code-size-16-mobile
 text-align: start
 
 -- end: ftd.column
@@ -836,7 +836,7 @@ spacing.fixed.vw: 2
 
 
 -- ftd.text: $timeline.title
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 
 
@@ -851,12 +851,12 @@ children: $timeline.child
 -- ftd.column:
 if: { ftd.device == "mobile" }
 width: fill-container
-spacing.fixed.vw: 2
+spacing.fixed.vw: 12
 
 
 
 -- ftd.text: $timeline.title
-role: $inherited.types.heading-large
+role: $fira-code-size-50-400
 color: #eb5939
 margin-left.px: 10
 
@@ -946,12 +946,14 @@ color: #0d0d0d
 width.fixed.percent: 50
 height: auto
 align-content: center
-border-color: red
+
 
 -- ftd.image:
 src: $hero-2.cover   
 width.fixed.percent: 100
 height: auto 
+margin-top.px: 60
+
 -- end: ftd.column
 
 -- end: ftd.row
@@ -1116,15 +1118,13 @@ body content:
 -- ftd.column:
 if: { ftd.device == "desktop" }
 width.fixed.vw: 24
-height.fixed.vw: 14
-;;align-content: center
+height.fixed.vw: 16
 spacing.fixed.px: 10
-
 
 
 -- ftd.text: $network-comp.title
 role: $fira-code-size-24-400
-color: #b7ab98
+color: #da5e1c
 text-align: center
 align-self: center
 
@@ -1147,7 +1147,7 @@ margin-horizontal.vw: 4
 
 -- ftd.text: $network-comp.title
 role: $fira-code-size-24-400
-color: #b7ab98
+color: #da5e1c
 ;;text-align: center
 
 -- ftd.text: $network-comp.content
@@ -1183,7 +1183,7 @@ id: network
 -- ftd.column:
 if: { ftd.device == "desktop" }
 width: fill-container
-spacing.fixed.vw: 2
+spacing.fixed.vw: 6
 align-content: center
 
 
@@ -1195,7 +1195,7 @@ color: #eb5939
 -- ftd.row:
 width: fill-container
 align-content: center
-spacing.fixed.px: 20
+spacing.fixed.px: 60
 wrap: true
 children: $network.network-child
 
@@ -1502,7 +1502,7 @@ wrap: true
 
 -- ftd.column:
 width.fixed.vw: 20
-width.fixed.vw if {ftd.device == "mobile"}: 48
+width.fixed.vw if {ftd.device == "mobile"}: 84
 spacing.fixed.vw: 1
 spacing.fixed.vw if {ftd.device == "mobile"}: 4
 
@@ -1512,18 +1512,10 @@ width: fill-container
 spacing: space-between
 wrap: true
 
-/-- ftd.image:
-src: $footer.company-logo
-width.fixed.vw: 6
-height.fixed.vw: 6
-width.fixed.vw if {ftd.device == "mobile"}: 20
-height.fixed.vw if {ftd.device == "mobile"}: 16
-
-
 
 -- ftd.text: $footer.caption-1
 role: $fira-code-size-38-400
-role if {ftd.device == "mobile"}: $fira-code-size-50-400
+role if {ftd.device == "mobile"}: $fira-code-size-38-400
 color: #eb5939
 margin-top.px if {ftd.device == "mobile"}: 10
 
@@ -1538,12 +1530,13 @@ color: #b7ab98
 
 -- ftd.column:
 width.fixed.vw: 20
-width.fixed.vw if {ftd.device == "mobile"}: 48
+width.fixed.vw if {ftd.device == "mobile"}: 80
 spacing.fixed.vw: 2
+
 
 -- ftd.text: $footer.caption-2
 role: $fira-code-size-38-400
-role if {ftd.device == "mobile"}: $inherited.types.heading-medium
+role if {ftd.device == "mobile"}: $fira-code-size-38-400
 color: #eb5939
 
 -- ftd.row:
@@ -1567,36 +1560,36 @@ height: fill-container
 -- ftd.column:
 width.fixed.vw: 20
 width.fixed.vw if {ftd.device == "mobile"}: 48
-spacing.fixed.vw: 2
+spacing.fixed.vw: 4
 
 
 -- ftd.text: $footer.caption-3
 role: $fira-code-size-38-400
-role if {ftd.device == "mobile"}: $inherited.types.heading-medium
+role if {ftd.device == "mobile"}: $fira-code-size-38-400
 color: #eb5939
 
 -- ftd.text: $footer.caption-text-1
-role: $fira-code-size-24-400
+role: $fira-code-size-20-400
 link: $footer.text-link-1
 color: #b7ab98
 
 -- ftd.text: $footer.caption-text-2
-role: $fira-code-size-24-400
+role: $fira-code-size-20-400
 color: #b7ab98
 link: $footer.text-link-2
 
 -- ftd.text: $footer.caption-text-3
-role: $fira-code-size-24-400
+role: $fira-code-size-20-400
 color: #b7ab98
 link: $footer.text-link-3
 
 -- ftd.text: $footer.caption-text-4
-role: $fira-code-size-24-400
+role: $fira-code-size-20-400
 color: #b7ab98
 link: $footer.text-link-4
 
 -- ftd.text: $footer.caption-text-5
-role: $fira-code-size-24-400
+role: $fira-code-size-20-400
 color: #b7ab98
 link: $footer.text-link-5
 
@@ -1616,12 +1609,12 @@ wrap: true
 
 -- ftd.column:
 width.fixed.vw: 24
-width.fixed.vw if {ftd.device == "mobile"}: 60
+width.fixed.vw if {ftd.device == "mobile"}: 80
 
 
 -- ftd.text: $footer.copyright
 role: $fira-code-size-20-400
-role if {ftd.device == "mobile"}: $inherited.types.copy-large
+role if {ftd.device == "mobile"}: $fira-code-size-16-400
 color: #b7ab98
 text-align: start
 margin-top.px if {ftd.device == "mobile"}: 8
@@ -1870,10 +1863,11 @@ link: $web3-page.button-link-1
 -- ftd.column:
 if: { ftd.device == "mobile" }
 width: fill-container
-spacing.fixed.vw: 4
+spacing.fixed.vw: 6
 background.solid: #0d0d0d
 padding.vw: 8
-margin-top.vw: 16
+margin-top.vw: 24
+margin-left.px: 10
 
 
 -- ftd.text: $web3-page.title

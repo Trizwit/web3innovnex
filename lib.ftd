@@ -1797,8 +1797,8 @@ children child:
 
 -- ftd.column:
 width: fill-container
-height: fill-container
-background.solid: #0d0d0d
+height: auto
+background.solid: #000
 
 
 -- ftd.row: 
@@ -1819,20 +1819,32 @@ cta-link-5: $web3-page.cta-link-5
 
 -- end: ftd.row
 
+-- ftd.row:
+;; if: { ftd.device == "desktop" }
+width: fill-container
+height.fixed.vh if { ftd.device== "desktop" }: 10
+height.fixed.px if { ftd.device == "mobile" }: 60
+
+-- ftd.text: empty
+
+-- end: ftd.row
+
 
 -- ftd.column:
 width: fill-container
-background.solid: #0d0d0d
-;;background.image: $assets.files.assets.bg.jpg
+height: auto
+;; background.solid: #0d0d0d
+background.image: $bg-image
 
 -- ftd.column:
 if: { ftd.device == "desktop" }
 width: fill-container
+height.fixed.percent: 125
 spacing.fixed.vw: 2
 border-bottom-width.px: 2
-padding-top.vh: 20
+padding-vertical.vh: 9
 padding-horizontal.vw: 8
-padding-bottom.vh: 5
+padding-bottom.px: 150
 
 -- ftd.text: $web3-page.title
 role: $fira-code-size-80-700
@@ -1845,17 +1857,18 @@ role: $fira-code-size-24-400
 color: #b7ab98
 
 -- ftd.text: $web3-page.cta-button
-role: $fira-code-size-16-400
+role: $fira-code-size-20-400
 text-align: center
 width.fixed.vw: 12
 padding-vertical.px: 12
 margin-top.px: 20
 border-radius.px: 4
 background.solid: #eb5939
-background.solid if {web3-page.is-active-1}: pink
+background.solid if {web3-page.is-active-1}: #fff
+color if {web3-page.is-active-1}: #000
 $on-mouse-enter$: $ftd.set-bool($a = $web3-page.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $web3-page.is-active-1, v = false)
-color: #0d0d0d
+color: #fff
 link: $web3-page.button-link-1
 
 -- end: ftd.column
@@ -1863,8 +1876,9 @@ link: $web3-page.button-link-1
 -- ftd.column:
 if: { ftd.device == "mobile" }
 width: fill-container
+;; height: auto
 spacing.fixed.vw: 6
-background.solid: #0d0d0d
+;; background.solid: #0d0d0d
 padding.vw: 8
 margin-top.vw: 24
 margin-left.px: 10
@@ -1886,11 +1900,12 @@ text-align: center
 width.fixed.vw: 28
 padding-vertical.px: 8
 border-radius.px: 4
-background.solid: orange
-background.solid if {web3-page.is-active-1}: pink
+background.solid: #eb5939
+background.solid if {web3-page.is-active-1}: #fff
+color if {web3-page.is-active-1}: #eb5939
 $on-mouse-enter$: $ftd.set-bool($a = $web3-page.is-active-1, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $web3-page.is-active-1, v = false)
-color: #0d0d0d
+color: #fff
 link: $web3-page.button-link-1
 
 -- end: ftd.column
@@ -1921,7 +1936,11 @@ children: $web3-page.child
 
 
 
-
+-- ftd.background-image bg-image: 
+src: $assets.files.assets.Artboard.png
+repeat: no-repeat 
+size: contain
+position: right
 
 
 

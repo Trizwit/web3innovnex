@@ -353,6 +353,7 @@ src: $hero-1.cover
 width.fixed.percent: 100
 height: auto 
 
+
 -- end: ftd.column
 
 
@@ -642,6 +643,21 @@ children: $events.child
 
 
 
+
+
+
+-- ftd.shadow box:
+color: #f7a278
+x-offset.px: 0
+y-offset.px: 0
+blur.px: 5
+spread.px: 2
+inset: false
+
+
+
+
+
 -- component timeline-comp:
 string date:
 string place:
@@ -651,6 +667,7 @@ boolean $hover: false
 
 -- ftd.row:
 width: fill-container
+align-content: center 
 
 -- ftd.row:
 if: { ftd.device == "desktop" }
@@ -662,14 +679,15 @@ padding-horizontal.vw: 2
 width.fixed.vw: 8
 height.fixed.vw: 8
 border-radius.percent: 50
-background.solid: #000000
+background.solid: #f6854c
 border-color: #eb5939
 border-width.px: 1
 padding.px: 8
 align-content: center
+shadow: $box
 
 -- ftd.text: $timeline-comp.date
-color: #b7ab98
+color: #ffffff
 color if {timeline-comp.hover}: #000
 role: $inherited.types.heading-tiny
 text-align: center
@@ -691,9 +709,14 @@ border-left-width.px: 8
 -- end: ftd.column
 
 -- ftd.column:
-width.fixed.vw: 36
+width.fixed.vw: 24
 border-color: #eb5939
+border-width.px: 1
+border-top-left-radius.px: 24
+border-bottom-right-radius.px: 24
 padding.vw: 2
+margin-left.px: 20
+shadow: $box
 
 -- ftd.text: $timeline-comp.place
 color: #eb5939
@@ -733,6 +756,7 @@ background.solid: #000000
 border-color: #eb5939
 border-width.px: 1
 align-content: center
+shadow: $box
 
 -- ftd.text: $timeline-comp.date
 color: #b7ab98
@@ -761,6 +785,7 @@ width.fixed.vw: 53
 height.fixed.vw: 66
 padding.vw: 2
 margin-left.px: 8
+
 
 -- ftd.text: $timeline-comp.place
 color: #eb5939
@@ -816,6 +841,7 @@ spacing.fixed.vw: 2
 -- ftd.text: $timeline.title
 role: $inherited.types.heading-large
 color: #eb5939
+
 
 -- ftd.column:
 width: fill-container
@@ -1813,6 +1839,7 @@ cta-link-5: $web3-page.cta-link-5
 -- ftd.column:
 width: fill-container
 background.solid: #0d0d0d
+;;background.image: $assets.files.assets.bg.jpg
 
 -- ftd.column:
 if: { ftd.device == "desktop" }

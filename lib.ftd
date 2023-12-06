@@ -1,6 +1,8 @@
+-- import: shaheen-senpai.github.io/fira-code/assets as fira-code-assets
+
+
+
 -- boolean $form-open: false
-
-
 
 
 -- component navbar:
@@ -364,12 +366,14 @@ margin-left.px: 100
 
 -- ftd.text: $hero-1.headline
 margin-bottom.px: 16
+;;role: $fira-code-size-50-400
 role: $inherited.types.heading-large
 color: #eb5939
 
 
 -- ftd.text: $hero-1.content
 margin-bottom.px: 32
+;;role: $fira-code-size-24-400
 role: $inherited.types.heading-small
 color: #b7ab98
 
@@ -830,12 +834,23 @@ height.fixed.vw if { ftd.device == "mobile" }: 32
 margin-vertical.vw: 2
 
 
--- ftd.image:
-src: $partner-comp.logo
+-- ftd.row:
 width: fill-container
 height: fill-container
+background.solid: white
 border-radius.percent: 50
-fit: contain
+align-content: center
+align-self: center
+
+
+-- ftd.image:
+width.fixed.percent: 70
+height.fixed.percent: 70
+src: $partner-comp.logo
+fit: cover
+align-self: center
+
+-- end: ftd.row
 
 -- end: ftd.column
 
